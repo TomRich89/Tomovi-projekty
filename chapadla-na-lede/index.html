@@ -315,11 +315,11 @@ function angDiff(a,b){let d=(b-a)%TAU;if(d>Math.PI)d-=TAU;if(d<-Math.PI)d+=TAU;r
 function lerpAng(a,b,t){return a+angDiff(a,b)*t}
 
 const DIFFS={
-  easy:{spd:.8, react:.36,err:.24,steal:.6, tent:.2, ink:.25,save:.4, shot:.3, pass:.6, range:300,hold:4.5,fo:.48,ot:.15,int:.35,deke:0,dive:.25,gacc:.55},
-  med: {spd:.86,react:.34,err:.18,steal:1.05,tent:.38,ink:.42,save:.5, shot:.21,pass:1,  range:340,hold:3.4,fo:.34,ot:.35,int:.45,deke:.5,dive:.4,gacc:.8},
-  hard:{spd:1.0, react:.15,err:.09,steal:2.0, tent:.75,ink:.7, save:.7, shot:.23, pass:1.5,range:400,hold:2.2,fo:.24,ot:.75,int:.6,deke:1,dive:.6,gacc:1}
+  easy:{spd:.76,react:.42,err:.28,steal:.42,tent:.15,ink:.19,save:.32,shot:.3, pass:.6, range:300,hold:4.5,fo:.48,ot:.15,int:.35,deke:0,dive:.25,gacc:.55},
+  med: {spd:.82,react:.4, err:.22,steal:.74,tent:.29,ink:.32,save:.42,shot:.21,pass:1,  range:340,hold:3.4,fo:.34,ot:.35,int:.45,deke:.5,dive:.4,gacc:.8},
+  hard:{spd:.95,react:.21,err:.13,steal:1.4, tent:.56,ink:.52,save:.62,shot:.23, pass:1.5,range:400,hold:2.2,fo:.24,ot:.75,int:.6,deke:1,dive:.6,gacc:1}
 };
-const MATE={spd:.95,react:.14,err:.09,steal:1.6,tent:.35,ink:0,save:.8,shot:.4,pass:1.2,range:340,hold:3.2,fo:.3,ot:.5,int:.45,deke:.6,dive:.4,gacc:.8};
+const MATE={spd:.95,react:.14,err:.09,steal:1.6,tent:.35,ink:0,save:.85,shot:.4,pass:1.2,range:340,hold:3.2,fo:.3,ot:.5,int:.45,deke:.6,dive:.4,gacc:.8};
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let noShake=RM;try{if(localStorage.getItem('chapadla-shake')==='0')noShake=true}catch(e){}
 let seriesOn=false;try{seriesOn=localStorage.getItem('chapadla-series')==='1'}catch(e){}
@@ -356,7 +356,7 @@ function layoutVert(){const st=document.querySelector('.stage');const v=touchy()
   if(v){const avail=innerHeight-(document.querySelector('.board').offsetHeight+document.querySelector('.touch').offsetHeight+80);let w=Math.min(innerWidth-16,avail/1.7857);w=Math.max(200,w);const h=w*1.7857;st.style.width=w+'px';st.style.height=h+'px';st.style.minWidth='0';cv.style.width=h+'px';cv.style.height=w+'px'}
   else{st.style.width='';st.style.height='';st.style.minWidth='';cv.style.width='';cv.style.height=''}}
 function resize(){layoutVert();
-  const cw=VERT?(parseFloat(cv.style.width)||1000):(cv.clientWidth||1000),dpr=Math.min(2.6,Math.max(1,cw/1000)*(window.devicePixelRatio||1));
+  const cw=VERT?(parseFloat(cv.style.width)||1000):(cv.clientWidth||1000),dpr=Math.max(1,Math.min(touchy()?1.6:2,cw*(window.devicePixelRatio||1)/1000));
   for(const [c,x] of [[cv,ctx],[rcv,rctx],[scv,sctx]]){c.width=Math.round(W*dpr);c.height=Math.round(H*dpr);x.setTransform(dpr,0,0,dpr,0,0)}
   drawRink(rctx);
 }
@@ -997,7 +997,7 @@ function showOverlay(html){
   overlay.querySelectorAll('[data-s]').forEach(b=>b.addEventListener('click',()=>{seriesOn=b.dataset.s==='1';series.done=true;try{localStorage.setItem('chapadla-series',seriesOn?'1':'0')}catch(e){}
     overlay.querySelectorAll('[data-s]').forEach(x=>x.setAttribute('aria-pressed',x===b))}));
   const hb=document.getElementById('howBtn');if(hb)hb.addEventListener('click',()=>{hb.blur();startTutorial()});
-  const go=document.getElementById('goBtn');if(go){go.addEventListener('click',()=>{go.blur();if(!tut2Done&&game.mode==='menu')startTutorial();else startMatch()});go.focus({preventScroll:true})}
+  const go=document.getElementById('goBtn');if(go){go.addEventListener('click',()=>{go.blur();startMatch()});go.focus({preventScroll:true})}
 }
 function hideOverlay(){overlay.hidden=true;overlay.innerHTML=''}
 function showHow(){
@@ -1183,7 +1183,7 @@ function drawOcto(o){
   }
   ctx.restore();
   ctx.font=(ARM.whole?'15px':ARM.real?'12px':'16px')+' "Lilita One", sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.lineWidth=3;ctx.strokeStyle=col.dark;if(ARM.real)ctx.globalAlpha=.8;
-  const nk=ARM.whole?1.15:(ARM.real?.85:.7),nx=-fx*r*nk,ny=-fy*r*nk;{ctx.save();ctx.translate(nx,ny);if(VERT)ctx.rotate(Math.PI/2);if(!ltDraw(ctx,String(o.num),0,0,17,false)){ctx.strokeText(o.num,0,0);ctx.fillStyle='#fff';ctx.fillText(o.num,0,0)}ctx.restore()}ctx.globalAlpha=1;
+  const nk=ARM.whole?1.15:(ARM.real?.85:.7),nx=-fx*r*nk,ny=-fy*r*nk;{ctx.save();ctx.translate(nx,ny);ctx.rotate(o.face+Math.PI/2);if(!ltDraw(ctx,String(o.num),0,0,17,false)){ctx.strokeText(o.num,0,0);ctx.fillStyle='#fff';ctx.fillText(o.num,0,0)}ctx.restore()}ctx.globalAlpha=1;
   ctx.restore();
   if(o.wind>0){drawText('!',o.x,o.y-o.r-22+Math.sin(T*40)*2,30,'#ff4057','#3a0010')}
   if(o.dash>0){ctx.strokeStyle='rgba(232,69,95,.5)';ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(o.x,o.y);ctx.lineTo(o.x-o.vx*.08,o.y-o.vy*.08);ctx.stroke()}
@@ -1274,7 +1274,7 @@ function drawOffscreen(){ // šipka k puku, když je schovaný v inkoustu
 }
 const cam={x:W/2,y:CY,z:1};
 function updateCam(dt){
-  const w=cv.clientWidth||1000,want=['menu','over'].includes(game.mode)?1:(touchy()&&w<900&&game.mode!=='goal')?clamp(720/w,1.1,1.32):w>=500?1:clamp(640/w,1,1.6);
+  const w=cv.clientWidth||1000,want=['menu','over'].includes(game.mode)?1:touchy()?1:w>=500?1:clamp(640/w,1,1.6);
   cam.z+=(want-cam.z)*Math.min(1,dt*3);
   const own=puck.owner,zz=cam.z>1.05,ahead=own?(own.team===0?(zz?170:110):(zz?-170:-110)):0,fx=zz?puck.x+ahead:puck.x*.7+ctrl.x*.3+ahead,fy=zz?puck.y*.8+CY*.2:puck.y*.7+ctrl.y*.3,k=Math.min(1,dt*(zz?2.6:4));
   cam.x+=(fx-cam.x)*k;cam.y+=(fy-cam.y)*k;
@@ -1285,12 +1285,12 @@ function render(){
   if(game.shake>0){const s=game.shake*14;ctx.translate(rnd(-s,s),rnd(-s,s))}
   if(cam.z>1.01){ctx.translate(W/2,H/2);ctx.scale(cam.z,cam.z);ctx.translate(-cam.x,-cam.y)}
   ctx.drawImage(rcv,0,0,W,H);
-  ctx.save();rinkPath(ctx);ctx.clip();ctx.drawImage(scv,0,0,W,H);ctx.restore();
+  ctx.drawImage(scv,0,0,W,H);
   drawParts();
   const list=[...octos].sort((a,b)=>(a===ctrl)-(b===ctrl)||a.y-b.y);
-  ctx.save();rinkPath(ctx,-2);ctx.clip();for(const o of list)drawOcto(o);
-  for(const o of octos)drawTent(o);ctx.restore();
-  drawFx2();drawPuck();drawNets();ctx.save();rinkPath(ctx);ctx.clip();drawClouds();ctx.restore();drawOffscreen();
+  for(const o of list)drawOcto(o);
+  for(const o of octos)drawTent(o);
+  drawFx2();drawPuck();drawNets();if(clouds.length){ctx.save();rinkPath(ctx);ctx.clip();drawClouds();ctx.restore()}drawOffscreen();
   const fs=Math.max(22,17/((cv.clientWidth||1000)/1000*cam.z));
   for(const f of floats){ctx.globalAlpha=Math.min(1,f.life*3.5);const m=VERT?40:90;drawPill(f.text,clamp(f.x,RK.L+m,RK.R-m),clamp(f.y,RK.T+(VERT?140:24),RK.B-(VERT?140:24)),fs*.8);ctx.globalAlpha=1}
   ctx.restore();ctx.save();
