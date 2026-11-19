@@ -8,6 +8,7 @@
 <meta property="og:title" content="Fundament — nemovitosti a jejich financování">
 <meta property="og:description" content="Magazín o nemovitostech, hypotékách a pojištění. Aktuální projekty v Praze a Středních Čechách.">
 <meta property="og:type" content="website">
+<link rel="preload" as="image" href="img/villa.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0C1320;--cream:#F7F2E9;--orange:#DD611C;--muted:#5b6170;--line:#e2d9c8;--card:#fffdf8}
@@ -220,6 +221,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:960px){
+ #kdo .wrap{grid-template-columns:1fr!important;gap:24px!important}
  .wrap{padding:0 20px}.nav ul{display:none}
  .ed,.projs,.split,.calc,.pgrid,.inproj,.gal{grid-template-columns:1fr}
  .pc.big{min-height:440px}.grid{grid-template-columns:1fr}
@@ -269,7 +271,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <div class="sh reveal"><h2>Magazín</h2><a href="#clanek">Všechny články</a></div>
     <div class="ed reveal">
       <a href="#clanek" class="feat">
-        <div class="ph"><img src="img/hala2.jpg" alt="Moderní výrobní hala při západu slunce"></div>
+        <div class="ph"><img loading="lazy" src="img/hala2.jpg" alt="Moderní výrobní hala při západu slunce"></div>
         <span class="kicker">Hlavní článek · Haly a komerce</span>
         <h3>Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit</h3>
         <p>Banka u haly, skladu nebo kanceláří posuzuje jinak než u bytu. Co chce vidět, kolik vlastních zdrojů počítat a jak se připravit.</p>
@@ -286,13 +288,13 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <div class="sh reveal"><h2>Aktuální projekty</h2><a href="#projekt">Všechny projekty</a></div>
     <div class="projs reveal">
       <a href="#projekt" class="pc big"><img src="img/villa.jpg" alt="Vila nad Prahou"><div class="in"><span class="tag">Luxusní bydlení</span><h3>[Vila Barrandov]</h3><div class="l">Praha 5 · 412 m² · bazén, výhled na Prahu</div><div class="pr">Cena na vyžádání</div></div></a>
-      <a href="#projekt" class="pc"><img src="img/rezidence.jpg" alt="Rezidenční dům"><div class="in"><span class="tag">Novostavba</span><h3>[Rezidence U Hellady]</h3><div class="l">Praha 4 · 12 bytů s terasami</div><div class="pr">od 7,9 mil. Kč</div></div></a>
-      <a href="#projekt" class="pc"><img src="img/domy.jpg" alt="Rodinné domy"><div class="in"><span class="tag">Rodinné domy</span><h3>[Domy Průhonice]</h3><div class="l">Praha-východ · 8 domů se zahradou</div><div class="pr">od 14,5 mil. Kč</div></div></a>
+      <a href="#projekt" class="pc"><img loading="lazy" src="img/rezidence.jpg" alt="Rezidenční dům"><div class="in"><span class="tag">Novostavba</span><h3>[Rezidence U Hellady]</h3><div class="l">Praha 4 · 12 bytů s terasami</div><div class="pr">od 7,9 mil. Kč</div></div></a>
+      <a href="#projekt" class="pc"><img loading="lazy" src="img/domy.jpg" alt="Rodinné domy"><div class="in"><span class="tag">Rodinné domy</span><h3>[Domy Průhonice]</h3><div class="l">Praha-východ · 8 domů se zahradou</div><div class="pr">od 14,5 mil. Kč</div></div></a>
     </div>
   </div></section>
 
   <section id="firmy" style="padding:0"><div class="split">
-    <div class="ph"><img src="img/domy.jpg" alt="Nová developerská lokalita rodinných domů"></div>
+    <div class="ph"><img loading="lazy" src="img/domy.jpg" alt="Nová developerská lokalita rodinných domů"></div>
     <div class="tx reveal">
       <span class="kicker">Pro developery a firmy</span>
       <h2>Stavíte halu, bytový dům nebo celý areál?</h2>
@@ -318,8 +320,17 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     </div>
   </div></section>
 
+  <section id="kdo"><div class="wrap" style="display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:center">
+    <div class="reveal"><span class="kicker">Kdo za magazínem stojí</span><h2 style="font-size:clamp(32px,3.6vw,46px);line-height:1.06;margin-top:12px">Lidé, kteří financování a prodej řeší každý den</h2></div>
+    <div class="reveal" style="border-top:1px solid var(--ink);padding-top:24px">
+      <p style="font-size:18px;margin-bottom:16px">Fundament vydává <b>Vision &amp; Synergy s.r.o.</b> Články píše a odborně garantuje tým, který denně řeší hypotéky, pojištění nemovitostí a financování projektů pro rodiny, developery a firmy v Praze a Středních Čechách.</p>
+      <p style="font-size:18px;color:var(--muted);margin-bottom:22px">Každý článek prochází odbornou kontrolou a vychází ze zdrojů, které uvádíme (ČNB, zákony, podmínky bank a pojišťoven).</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn" data-modal="obecne">Napište nám</button><a class="btn line" href="tel:+420723592976">723 592 976</a></div>
+    </div>
+  </div></section>
+
   <div class="nl" id="newsletter">
-    <img src="img/penthouse.jpg" alt="">
+    <img loading="lazy" src="img/penthouse.jpg" alt="">
     <div class="wrap">
       <span class="kicker" style="color:#f0a072">Newsletter · jednou týdně</span>
       <h2>Nejlepší články a nové projekty dřív než na portálech</h2>
@@ -332,7 +343,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 
 <!-- ================= ARTICLE ================= -->
 <div class="view" id="v-clanek">
-  <div class="ahero"><img src="img/hala.jpg" alt="Výrobní hala"><div class="in"><div class="wrap">
+  <div class="ahero"><img loading="lazy" src="img/hala.jpg" alt="Výrobní hala"><div class="in"><div class="wrap">
     <span class="kicker" style="color:#f0a072">Haly a komerce</span>
     <h1>Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit</h1>
     <div class="meta"><b>Tomáš Richtr</b>, Vision & Synergy · 17. 11. 2026 · 7 min čtení</div>
@@ -346,7 +357,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <h2>Možnosti financování</h2>
     <ul><li>investiční úvěr se zástavou pozemku</li><li>developerský úvěr čerpaný podle postupu stavby</li><li>leasing technologií odděleně od budovy</li><li>kombinace s dotačními programy</li></ul>
     <a href="#projekt" class="inproj">
-      <div class="ph"><img src="img/hala.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="ph"><img loading="lazy" src="img/hala.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
       <div class="c"><span class="kicker" style="color:#f0a072">Související projekt</span><h3>[Logistický park Středočeský kraj]</h3><p>Hala 4 800 m² k pronájmu i prodeji, financování řešíme na míru.</p></div>
     </a>
     <div class="author"><div class="av">TR</div><p><b>Tomáš Richtr</b>, ředitel firemních spoluprací ve Vision & Synergy. Řeší financování a pojištění nemovitostí pro rodiny, developery a firmy.</p></div>
@@ -361,7 +372,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 <!-- ================= PROJECT ================= -->
 <div class="view" id="v-projekt">
   <div class="hero" style="height:88vh">
-    <div class="slide on"><img src="img/rezidence.jpg" alt="Rezidence"></div>
+    <div class="slide on"><img loading="lazy" src="img/rezidence.jpg" alt="Rezidence"></div>
     <div class="hcap"><div class="wrap"><div class="t">
       <span class="kicker">Projekt · Praha 4 · Novostavba</span>
       <h1>[Rezidence <em>U Hellady</em>]</h1>
@@ -382,7 +393,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
         <h2 style="font-size:40px;margin:10px 0 18px;line-height:1.1">Klidné bydlení pár minut od centra</h2>
         <p>[Popis projektu: lokalita, architektura, standardy, doprava, občanská vybavenost.]</p>
         <p>[Každý projekt má tuto stránku. Větší nebo luxusní projekty mohou běžet i na vlastní doméně a odkazovat zpět na Fundament.]</p>
-        <div class="gal"><div class="ph"><img src="img/pent2.jpg" alt="Interiér" style="width:100%;height:100%;object-fit:cover"></div><div class="ph"><img src="img/rez2.jpg" alt="Exteriér" style="width:100%;height:100%;object-fit:cover"></div></div>
+        <div class="gal"><div class="ph"><img loading="lazy" src="img/pent2.jpg" alt="Interiér" style="width:100%;height:100%;object-fit:cover"></div><div class="ph"><img loading="lazy" src="img/rez2.jpg" alt="Exteriér" style="width:100%;height:100%;object-fit:cover"></div></div>
         <h3 id="cenik" style="font-size:30px;margin-top:20px">Ceník</h3>
         <table class="u">
           <tr><th>Byt</th><th>Dispozice</th><th>Plocha</th><th>Cena</th><th>Stav</th></tr>
@@ -411,7 +422,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <div><div class="logo">Fundament<i style="color:var(--orange);font-style:normal">.</i></div><p style="margin-top:14px;max-width:340px">Magazín o nemovitostech a jejich financování. Vydává Vision & Synergy s.r.o.</p></div>
     <div><h5>Magazín</h5><ul><li><a href="#home" data-go="magazin">Hypotéky</a></li><li><a href="#home" data-go="magazin">Novostavby</a></li><li><a href="#home" data-go="magazin">Luxusní bydlení</a></li><li><a href="#home" data-go="magazin">Haly a komerce</a></li></ul></div>
     <div><h5>Projekty</h5><ul><li><a href="#home" data-go="projekty">Byty</a></li><li><a href="#home" data-go="projekty">Rodinné domy</a></li><li><a href="#home" data-go="firmy">Komerční prostory</a></li></ul></div>
-    <div><h5>Kontakt</h5><ul><li><a data-modal="obecne">Napište nám</a></li><li><a href="https://vision-synergy.cz">vision-synergy.cz</a></li><li>fundamentmag.cz</li></ul></div>
+    <div><h5>Kontakt</h5><ul><li><a data-modal="obecne">Napište nám</a></li><li><a href="tel:+420723592976">723 592 976</a></li><li><a href="https://vision-synergy.cz">vision-synergy.cz</a></li><li>fundamentmag.cz</li></ul></div>
   </div>
   <div class="d">Obsah má informativní charakter a není investičním doporučením ani nabídkou úvěru či pojištění. [Doplnit údaje o registraci u ČNB.] Ilustrační fotografie.</div>
 </div></footer>
@@ -428,6 +439,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <label for="mZ">O co máte zájem</label>
     <select id="mZ"><option value="prohlidka">Prohlídka projektu</option><option value="hypo">Hypotéka / financování</option><option value="poj">Pojištění nemovitosti</option><option value="firma">Financování projektu pro firmu</option><option value="obecne">Jiný dotaz</option></select>
     <button class="btn" type="submit" style="margin-top:20px;width:100%;justify-content:center">Odeslat</button>
+    <p style="margin:16px 0 0;font-size:14px;text-align:center">Raději hned? Volejte <b>723 592 976</b></p>
     <small>Odesláním souhlasíte se zpracováním kontaktu za účelem odpovědi. [Ukázka: formulář zatím nikam neodesílá.]</small>
   </form>
   <div class="done" id="mD"><h3>Děkujeme</h3><p>Ozveme se vám do jednoho pracovního dne.</p></div>
@@ -439,10 +451,10 @@ const S=[
  ['rezidence','Novostavby','Nové byty v Praze. <em>Od rezervace po klíče.</em>','Aktuální projekty s ceníkem, financováním a pojištěním na jednom místě.','#projekt','Rezidence','Ceník bytů'],
  ['hala','Haly a komerce','Hala, sklad, areál. <em>Financování na míru.</em>','Pro developery a firmy: investiční a developerské úvěry, pojištění staveb.','#clanek','Komerce','Číst článek'],
  ['penthouse','Investice','Výhled, který <em>se zhodnocuje</em>','Jak vybrat a financovat nemovitost, která vydělává.','#clanek','Penthouse','Číst článek'],
- ['domy','Rodinné domy','Dům se zahradou <em>kousek za Prahou</em>','Nové lokality, ceny a co obnáší hypotéka na rodinný dům.','#projekt','Domy','Zobrazit domy']
+ ['dum','Rodinné domy','Dům se zahradou <em>kousek za Prahou</em>','Nové lokality, ceny a co obnáší hypotéka na rodinný dům.','#projekt','Domy','Zobrazit domy']
 ];
 const hero=document.getElementById('hero');
-S.forEach((s,i)=>hero.insertAdjacentHTML('afterbegin',`<div class="slide" data-i="${i}"><img src="img/${s[0]}.jpg" alt="${s[1]}"></div>`));
+S.forEach((s,i)=>hero.insertAdjacentHTML('afterbegin',`<div class="slide" data-i="${i}"><img loading="lazy" src="img/${s[0]}.jpg" alt="${s[1]}"></div>`));
 dots.innerHTML=S.map((s,i)=>`<div class="dot" data-i="${i}"><span class="bar"></span>0${i+1} <em style="font-style:normal">· ${s[5]}</em></div>`).join('');
 let cur=-1,timer;
 function show(i){if(i===cur)return;cur=i;
@@ -468,10 +480,10 @@ const A=[
  ['Pozemky a development','Odhad nemovitosti vyšel pod kupní cenou? Co to znamená a co dělat','Jak odhad ovlivní hypotéku a jaké máte možnosti.','pozemek','50% 50%'],
  ['Investice','Odpočet úroků z hypotéky: kolik ušetříte a jak ho uplatnit','Limity, potvrzení od banky a kdy odpočet nevznikne.','pent2','50% 50%']
 ];
-side.innerHTML=A.slice(0,4).map(a=>`<a href="#clanek"><div class="ph"><img src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><div><span class="kicker">${a[0]}</span><h4>${a[1]}</h4></div></a>`).join('');
+side.innerHTML=A.slice(0,4).map(a=>`<a href="#clanek"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><div><span class="kicker">${a[0]}</span><h4>${a[1]}</h4></div></a>`).join('');
 const C=['Vše','Hypotéky','Novostavby','Luxusní bydlení','Haly a komerce','Pozemky a development','Pojištění','Investice'];
 cats.innerHTML=C.map((c,i)=>`<button class="cat${i?'':' active'}">${c}</button>`).join('');
-const card=a=>`<a href="#clanek" class="card"><div class="ph"><img src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><span class="kicker">${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></a>`;
+const card=a=>`<a href="#clanek" class="card"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><span class="kicker">${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></a>`;
 function render(c){grid.innerHTML=A.filter(a=>c==='Vše'||a[0]===c).map(card).join('')||'<p style="color:var(--muted)">V této rubrice zatím nic není.</p>'}
 render('Vše');
 document.querySelectorAll('.cat').forEach(b=>b.onclick=()=>{document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.textContent)});
