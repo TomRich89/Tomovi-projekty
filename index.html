@@ -18,7 +18,7 @@
 <link rel="preload" as="image" href="img/villa.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Fundament","url":"https://fundament.malyvelkyweb.cz/","inLanguage":"cs","description":"Magazín o nemovitostech a jejich financování.","publisher":{"@type":"Organization","name":"Vision & Synergy s.r.o.","url":"https://vision-synergy.cz","telephone":"+420723592976"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Fundament","url":"https://fundament.malyvelkyweb.cz/","inLanguage":"cs","description":"Magazín o nemovitostech a jejich financování.","publisher":{"@type":"Organization","name":"Vision & Synergy s.r.o.","url":"https://vision-synergy.cz","telephone":"+420723592976","taxID":"22096370","address":{"@type":"PostalAddress","streetAddress":"U Hellady 697/4","postalCode":"140 00","addressLocality":"Praha 4","addressCountry":"CZ"}}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0C1320;--cream:#F7F2E9;--orange:#DD611C;--orange-ink:#AE4A12;--muted:#5b6170;--line:#e2d9c8;--card:#fffdf8}
@@ -276,6 +276,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <li><a href="#home" data-go="projekty">Projekty</a></li>
     <li><a href="#home" data-go="firmy">Pro firmy</a></li>
     <li><a href="#home" data-go="kalkulacka">Kalkulačka</a></li>
+    <li><a href="#home" data-go="kdo">O nás</a></li>
   </ul>
   <a href="#home" data-go="newsletter" class="btn">Odebírat</a>
   <button class="burger" id="bg" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mnav">☰</button>
@@ -343,7 +344,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
       <span class="kicker">Orientační výpočet</span>
       <h2>Kolik budete měsíčně splácet?</h2>
       <p style="color:var(--muted);font-size:17px">Posuňte jezdce. Přesnou nabídku od bank vám připraví hypoteční specialista, zdarma a nezávazně.</p>
-      <button class="btn" style="margin-top:24px" data-modal="hypo">Chci přesnou nabídku</button>
+      <button class="btn" style="margin-top:24px" data-modal="hypo" id="calcBtn">Chci přesnou nabídku</button>
     </div>
     <div class="box reveal">
       <label>Výše úvěru <span class="val" id="vA"></span></label><input type="range" id="a" min="500000" max="30000000" step="100000" value="8000000">
@@ -404,7 +405,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     </a>
     <div class="acta"><div><h3>Řešíte financování haly nebo komerční stavby?</h3><p>Projdeme váš záměr a řekneme, s čím počítat, než půjdete do banky.</p></div><button class="btn" data-modal="firma">Probrat projekt</button></div>
     <div class="author"><div class="av">TR</div><p><b>Tomáš Richtr</b>, ředitel firemních spoluprací ve Vision & Synergy. Řeší financování a pojištění nemovitostí pro rodiny, developery a firmy.</p></div>
-    <p class="disc">Článek má informativní charakter a není nabídkou úvěru ani pojištění. Zprostředkování provádějí osoby registrované u ČNB. [Doplnit údaje o registraci.]</p>
+    <p class="disc">Článek má informativní charakter a není nabídkou úvěru ani pojištění. Zprostředkování provádějí osoby registrované u ČNB. Vision &amp; Synergy s.r.o., IČ 22096370, sídlo U Hellady 697/4, 140 00 Praha 4, je vázaným zástupcem samostatného zprostředkovatele FINGO s.r.o. podle zák. č. 170/2018 Sb. a zák. č. 256/2004 Sb.</p>
   </article></div>
   <section style="padding-top:40px"><div class="wrap">
     <div class="sh"><h2>Mohlo by vás zajímat</h2></div>
@@ -468,7 +469,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <div><h5>Projekty</h5><ul><li><a href="#home" data-go="projekty">Byty</a></li><li><a href="#home" data-go="projekty">Rodinné domy</a></li><li><a href="#home" data-go="firmy">Komerční prostory</a></li></ul></div>
     <div><h5>Kontakt</h5><ul><li><a href="#kontakt" data-modal="obecne">Napište nám</a></li><li><a href="tel:+420723592976">723 592 976</a></li><li><a href="https://vision-synergy.cz">vision-synergy.cz</a></li><li>fundamentmag.cz</li></ul></div>
   </div>
-  <div class="d">Obsah má informativní charakter a není investičním doporučením ani nabídkou úvěru či pojištění. [Doplnit údaje o registraci u ČNB.] Ilustrační fotografie. © 2026 Vision &amp; Synergy s.r.o.</div>
+  <div class="d">Obsah má informativní charakter a není investičním doporučením ani nabídkou úvěru či pojištění. Vision &amp; Synergy s.r.o., IČ 22096370, sídlo U Hellady 697/4, 140 00 Praha 4, je vázaným zástupcem samostatného zprostředkovatele FINGO s.r.o. podle zák. č. 170/2018 Sb. a zák. č. 256/2004 Sb. Ilustrační fotografie. © 2026 Vision &amp; Synergy s.r.o.</div>
 </div></footer>
 <div class="mbar"><a class="btn line" href="tel:+420723592976" style="color:var(--cream)">Zavolat</a><button class="btn" data-modal="obecne">Napište nám</button></div>
 
@@ -484,6 +485,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <input class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" name="web">
     <label for="mZ">O co máte zájem</label>
     <select id="mZ"><option value="prohlidka">Prohlídka projektu</option><option value="hypo">Hypotéka / financování</option><option value="poj">Pojištění nemovitosti</option><option value="firma">Financování projektu pro firmu</option><option value="obecne">Jiný dotaz</option></select>
+    <label for="mM">Zpráva <span style="font-weight:400;color:var(--muted)">(nepovinné)</span></label><textarea id="mM" rows="3"></textarea>
     <button class="btn" type="submit" style="margin-top:20px;width:100%;justify-content:center">Odeslat</button>
     <p style="margin:16px 0 0;font-size:14px;text-align:center">Raději hned? Volejte <b>723 592 976</b></p>
     <small>Kontakt použijeme jen k odpovědi na váš dotaz a nikomu dalšímu ho nepředáme. [Ukázka: formulář zatím nikam neodesílá.]</small>
@@ -553,7 +555,7 @@ function route(){const v=(location.hash||'#home').slice(1);const id=['home','cla
  document.querySelectorAll('.view.on .reveal').forEach(e=>io.observe(e));hdrState()}
 
 const M={prohlidka:['Prohlídka','Domluvme prohlídku','Vyberte si termín, rovnou spočítáme i financování.'],hypo:['Financování','Přesná nabídka hypotéky','Porovnáme nabídky bank a připravíme výpočet pro vaši situaci.'],firma:['Pro firmy','Probereme váš projekt','Developerské a investiční úvěry, pojištění stavby, hypotéky pro vaše kupující.'],obecne:['Kontakt','Napište nám','Nechte nám kontakt, do jednoho pracovního dne se vám ozveme.']};
-function openM(k){lastF=document.activeElement;const t=M[k]||M.obecne;mK.textContent=t[0];mT.textContent=t[1];mP.textContent=t[2];mZ.value=k in M?k:'obecne';if(k==='obecne')mZ.value='obecne';mF.style.display='';mD.style.display='none';modal.classList.add('on');setTimeout(()=>mN.focus(),50)}
+function openM(k){lastF=document.activeElement;const t=M[k]||M.obecne;mK.textContent=t[0];mT.textContent=t[1];mP.textContent=t[2];mZ.value=k in M?k:'obecne';if(k==='obecne')mZ.value='obecne';mM.value=(lastF&&lastF.id==='calcBtn')?`Úvěr ${vA.textContent}, splatnost ${vY.textContent}.`:'';mF.style.display='';mD.style.display='none';modal.classList.add('on');setTimeout(()=>mN.focus(),50)}
 document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();openM(b.dataset.modal)}));
 let lastF=null;
 function closeM(){modal.classList.remove('on');if(lastF)lastF.focus()}

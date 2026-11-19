@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fundament.malyvelkyweb.cz/sitemap.xml
