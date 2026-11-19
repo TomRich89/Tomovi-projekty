@@ -208,6 +208,19 @@ a:hover .ph img{transform:scale(1.045)}
 .inproj .c{padding:28px 30px;display:flex;flex-direction:column;gap:8px;justify-content:center}
 .inproj h3{font-size:28px}
 .inproj p{color:#c9c5bc;font-size:15px;margin:0}
+.body h3{font-size:24px;margin:32px 0 10px}
+.body h4{font-size:20px;margin:26px 0 8px}
+.body ol{margin:0 0 20px 22px;font-size:18.5px;line-height:1.7}
+.body li{margin-bottom:6px}
+.body a{color:var(--orange);text-decoration:underline;text-underline-offset:3px}
+.body .tbl{overflow-x:auto;margin:10px 0 26px}
+.body table{border-collapse:collapse;width:100%;font-size:16px}
+.body th,.body td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.body th{border-bottom:1px solid var(--ink);font-weight:600}
+.body .srcs{margin-top:44px;border-top:1px solid var(--line);padding-top:20px}
+.body .srcs h4{font-family:'Hanken Grotesk',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
+.body .srcs ol{font-size:14px;line-height:1.5;color:var(--muted)}
+.body .srcs a{color:var(--muted)}
 .disc{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;margin-top:40px}
 
 /* project */
@@ -291,12 +304,12 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
   <section id="magazin"><div class="wrap">
     <div class="sh reveal"><h2>Magazín</h2><a href="#archiv">Všech 70 článků</a></div>
     <div class="ed reveal">
-      <a href="#clanek" class="feat">
+      <a href="#clanek-145" class="feat">
         <div class="ph"><img loading="lazy" src="img/hala2.jpg" alt="Moderní výrobní hala při západu slunce"></div>
         <span class="kicker">Hlavní článek · Haly a komerce</span>
         <h3>Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit</h3>
         <p>Banka u haly, skladu nebo kanceláří posuzuje jinak než u bytu. Co chce vidět, kolik vlastních zdrojů počítat a jak se připravit.</p>
-        <div class="meta"><b>Tomáš Richtr</b> · 17. 11. 2026 · 7 min čtení</div>
+        <div class="meta"><b>Tomáš Richtr</b> · listopad 2026 · 4 min čtení</div>
       </a>
       <div class="list" id="side"></div>
     </div>
@@ -381,25 +394,16 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 
 <!-- ================= ARTICLE ================= -->
 <div class="view" id="v-clanek">
-  <div class="ahero"><img loading="lazy" src="img/hala.jpg" alt="Výrobní hala"><div class="in"><div class="wrap">
-    <span class="kicker" style="color:#f0a072">Haly a komerce</span>
-    <h1>Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit</h1>
-    <div class="meta"><b>Tomáš Richtr</b>, Vision & Synergy · 17. 11. 2026 · 7 min čtení</div>
+  <div class="ahero"><img id="arImg" src="img/hala.jpg" alt=""><div class="in"><div class="wrap">
+    <span class="kicker" id="arK" style="color:#f0a072"></span>
+    <h1 id="arT"></h1>
+    <div class="meta" id="arM"></div>
   </div></div></div>
   <div class="wrap"><article class="body">
-    <p class="perex">Banka u haly, skladu nebo kanceláří posuzuje jinak než u bytu. Projdeme, co chce vidět, kolik vlastních zdrojů počítat a jak se na jednání připravit.</p>
-    <p>[Ukázkový text. Sem přijde článek ze série, napsaný AI agentem, prošlý smyčkou kvality 95+ a vaší kontrolou.]</p>
-    <h2>Kolik vlastních peněz banka chce</h2>
-    <p>U komerčních nemovitostí banky obvykle financují nižší podíl hodnoty než u bydlení. Rozhoduje typ stavby, nájemní smlouvy a historie firmy.</p>
-    <div class="pull">„Předem podepsané nájemní smlouvy často rozhodnou o podmínkách víc než samotná hodnota stavby.“</div>
-    <h2>Možnosti financování</h2>
-    <ul><li>investiční úvěr se zástavou pozemku</li><li>developerský úvěr čerpaný podle postupu stavby</li><li>leasing technologií odděleně od budovy</li><li>kombinace s dotačními programy</li></ul>
-    <a href="#projekt" class="inproj">
-      <div class="ph"><img loading="lazy" src="img/hala.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="c"><span class="kicker" style="color:#f0a072">Související projekt</span><h3>[Logistický park Středočeský kraj]</h3><p>Hala 4 800 m² k pronájmu i prodeji, financování řešíme na míru.</p></div>
-    </a>
-    <div class="author"><div class="av">TR</div><p><b>Tomáš Richtr</b>, ředitel firemních spoluprací ve Vision & Synergy. Řeší financování a pojištění nemovitostí pro rodiny, developery a firmy.</p></div>
-    <p class="disc">Článek má informativní charakter a není nabídkou úvěru ani pojištění. Zprostředkování provádějí osoby registrované u ČNB. [Doplnit údaje o registraci.]</p>
+    <p class="perex" id="arP"></p>
+    <div id="arB"></div>
+    <div class="author"><div class="av">TR</div><p><b>Tomáš Richtr</b>, ředitel firemních spoluprací ve Vision & Synergy. Řeší financování a pojištění nemovitostí pro rodiny, developery a firmy. <a href="tel:+420723592976" style="color:var(--orange)">723 592 976</a></p></div>
+    <p class="disc" id="arD"></p>
   </article></div>
   <section style="padding-top:40px"><div class="wrap">
     <div class="sh"><h2>Mohlo by vás zajímat</h2></div>
@@ -447,8 +451,8 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
         <button class="btn" data-modal="prohlidka">Domluvit prohlídku</button>
         <ul>
           <li>Kolik budete splácet? <a href="#home" data-go="kalkulacka">Kalkulačka</a></li>
-          <li>Čtěte: <a href="#clanek">Rezervační smlouva: 7 bodů, které vás ochrání</a></li>
-          <li>Čtěte: <a href="#clanek">Novostavba od developera: jak hypotéka čerpá po etapách</a></li>
+          <li>Čtěte: <a href="#clanek-66">Rezervační smlouva: 7 bodů, které vás ochrání</a></li>
+          <li>Čtěte: <a href="#clanek-70">Novostavba od developera: jak hypotéka čerpá po etapách</a></li>
         </ul>
       </aside>
     </div>
@@ -484,13 +488,15 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 </div></div>
 <script>
 var paused=false;
+const TN={"Kolik vám banka půjčí? Tři čísla, která rozhodnou o vaší hypotéce": 61, "Vlastní zdroje na hypotéku: proč 20 % ceny často nestačí": 62, "Hypotéka pro OSVČ: proč vám banka „vidí“ menší příjem, než máte": 63, "Hypotéka do 36 let: jak využít 90 % a nespálit se": 64, "Koupě bytu s hypotékou krok za krokem: 8 kroků bez zbytečného stresu": 65, "Rezervační smlouva: 7 bodů, které vás ochrání před ztrátou peněz": 66, "Advokátní, notářská, nebo bankovní úschova: kde jsou vaše miliony v bezpečí": 67, "Odhad nemovitosti vyšel pod kupní cenou? Tady je, co to znamená a co dělat": 68, "Hypotéka na družstevní byt: 4 cesty, jak ho financovat": 69, "Novostavba od developera: jak hypotéka čerpá po etapách a co to stojí": 70, "Americká hypotéka: kdy dává smysl a proč je od roku 2026 přísnější": 71, "Poplatky u hypotéky: za co platíte, co je zdarma a proč nestačí sledovat sazbu": 72, "Odpočet úroků z hypotéky: kolik ušetříte a jak ho uplatnit": 74, "Hypoteční poradce, nebo přímo banka? Jak se rozhodnout a nenaletět": 75, "Konec fixace hypotéky: plán na 6 měsíců, který vám ušetří desítky tisíc": 76, "Refinancování hypotéky: vyplatí se vám, nebo jen přesouváte papíry?": 77, "Mimořádná splátka hypotéky bez poplatku: 7 situací, kdy bance nic nedáte": 78, "Krátká, nebo dlouhá fixace? 4 otázky, podle kterých si vyberete": 79, "Konsolidace úvěrů do hypotéky: nižší splátka, ale kolik vás to nakonec stojí?": 80, "Rozvod a společná hypotéka: 4 možná řešení a proč na bance záleží nejvíc": 85, "Úmrtí dlužníka a hypotéka: co čeká rodinu a jak ji ochránit předem": 86, "Potíže se splácením hypotéky: 5 řešení, která můžete bance navrhnout": 87, "Splatit hypotéku dřív, nebo investovat? 5 pravidel pro rozumné rozhodnutí": 88, "Hypotéka na rekonstrukci: jak si půjčit na opravu domu bez zbytečných chyb": 90, "Podpojištění domu: proč vám pojišťovna vyplatí jen část škody": 31, "Pojištění nemovitosti, nebo domácnosti? Jednoduchý test, který rozhodne": 32, "Povodeň a pojištění: 4 věci, které musíte vědět dřív, než přijde voda": 33, "Pojištění odpovědnosti v běžném životě: malá platba, která vás chrání před velkým dluhem": 34, "Vytopili jste souseda? Kdo platí škodu a co udělat v první hodině": 35, "Byt v nájmu: kdo co pojišťuje, aby po škodě nezůstala díra": 36, "Pojištění chaty a chalupy: proč nestačí opsat smlouvu od domu": 37, "Krádež a vloupání: jak zabezpečit byt, aby pojišťovna zaplatila celou škodu": 38, "Pojištění fotovoltaiky na střeše: 5 věcí, které po instalaci nahlásit pojišťovně": 39, "Novostavba: jak pojistit dům, který teprve roste": 40, "Pojištění k hypotéce: co je vinkulace a proč nemusíte brát pojistku od banky": 41, "Vichřice a krupobití: jak nahlásit škodu, aby pojišťovna neměla důvod krátit": 42, "Pojištění bytového domu a SVJ: kde končí pojistka domu a začíná ta vaše": 44, "Daň z nemovitostí: spočítejte si ji za 5 minut a nezmeškejte 31. května": 106, "Výdajové paušály OSVČ: kdy vám skutečné výdaje ušetří desítky tisíc": 107, "Daňové slevy a odpočty: 6 položek, které lidé v přiznání vynechávají": 109, "Prodej zděděné nemovitosti: kdy zaplatíte 15 % daně a kdy nic": 110, "Pronájem bytu a daně: jak z nájemného nezaplatit víc, než musíte": 111, "Darování nemovitosti v rodině: kdy nezaplatíte žádnou daň a na co přesto myslet": 112, "DIP: jak ušetřit tisíce korun na dani ročně a nespálit se při výběru": 91, "Penzijko: až 4 080 Kč příspěvku ročně a k tomu úspora na dani": 92, "Příspěvek zaměstnavatele na penzi: až 50 000 Kč ročně bez daně": 93, "Spořicí účet, nebo termínovaný vklad? Rozhoduje, kdy budete peníze potřebovat": 94, "Finanční rezerva: kolik peněz mít stranou a kde je nenechat ztrácet hodnotu": 95, "ETF pro začátečníky: jak investovat jednoduše a neplatit zbytečně": 96, "Stavební spoření: vyplatí se ještě s podporou 1 000 Kč ročně?": 97, "Investice pro děti: kolik naspoříte za 18 let a na čí jméno peníze vést": 99, "Důchod z prvního pilíře: jak si spočítat, kolik od státu dostanete": 100, "Daň z prodeje investic: kdy zaplatíte 15 % a kdy nic": 101, "Garantované výnosy: 7 varovných signálů, že jde o podvod": 104, "Finanční plán pro rodinu v 5 krocích: od rezervy po důchod": 105, "Pojištění odpovědnosti podnikatele: jedna chyba může stát víc než roční tržby": 136, "Pojištění firemního majetku: 5 rozhodnutí, která určí, kolik dostanete": 137, "Flotilové pojištění: od kolika aut se vyplatí a kdy zůstat u jednotlivých smluv": 138, "Pojištění přerušení provozu: kdo zaplatí nájem a mzdy, když firma stojí": 139, "Kybernetické pojištění pro malé firmy: co zaplatí, když vás zašifrují": 140, "Odpovědnost zaměstnance za škodu: kdy zaplatí 4,5násobek mzdy a kdy všechno": 141, "Zákonné pojištění odpovědnosti zaměstnavatele: co musíte udělat hned u prvního zaměstnance": 142, "Profesní odpovědnost: kdo ji musí mít a kdy se vyplatí i bez povinnosti": 143, "Úvěr pro OSVČ a malé firmy: jak banku přesvědčit a kdy pomůže státní záruka": 144, "Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit": 145, "Pojištění odpovědnosti členů vedení: kdy jednatel s.r.o. platí ze svého": 146, "Pojištění stavebních firem: 3 smlouvy, bez kterých na stavbu nevstupujte": 147, "Pojištění dopravce a nákladu: proč vám dopravce nezaplatí celou hodnotu zboží": 148, "Podnikatelská rezerva: kolik měsíců nákladů mít stranou a kde je držet": 149, "Jak vybrat pojišťovacího poradce nebo makléře: 6 otázek před první schůzkou": 150, "Odhad nemovitosti vyšel pod kupní cenou? Co to znamená a co dělat": 68, "Rezervační smlouva: 7 bodů, které vás ochrání": 66, "Novostavba od developera: jak hypotéka čerpá po etapách": 70};
+const LK=t=>TN[t]?'#clanek-'+TN[t]:'#archiv';
 const AG=[["Hypotéky a koupě bydlení", "rezidence", ["Kolik vám banka půjčí? Tři čísla, která rozhodnou o vaší hypotéce", "Vlastní zdroje na hypotéku: proč 20 % ceny často nestačí", "Hypotéka pro OSVČ: proč vám banka „vidí“ menší příjem, než máte", "Hypotéka do 36 let: jak využít 90 % a nespálit se", "Koupě bytu s hypotékou krok za krokem: 8 kroků bez zbytečného stresu", "Rezervační smlouva: 7 bodů, které vás ochrání před ztrátou peněz", "Advokátní, notářská, nebo bankovní úschova: kde jsou vaše miliony v bezpečí", "Odhad nemovitosti vyšel pod kupní cenou? Tady je, co to znamená a co dělat", "Hypotéka na družstevní byt: 4 cesty, jak ho financovat", "Novostavba od developera: jak hypotéka čerpá po etapách a co to stojí", "Americká hypotéka: kdy dává smysl a proč je od roku 2026 přísnější", "Poplatky u hypotéky: za co platíte, co je zdarma a proč nestačí sledovat sazbu", "Odpočet úroků z hypotéky: kolik ušetříte a jak ho uplatnit", "Hypoteční poradce, nebo přímo banka? Jak se rozhodnout a nenaletět"]], ["Fixace a refinancování", "rezvecer", ["Konec fixace hypotéky: plán na 6 měsíců, který vám ušetří desítky tisíc", "Refinancování hypotéky: vyplatí se vám, nebo jen přesouváte papíry?", "Mimořádná splátka hypotéky bez poplatku: 7 situací, kdy bance nic nedáte", "Krátká, nebo dlouhá fixace? 4 otázky, podle kterých si vyberete", "Konsolidace úvěrů do hypotéky: nižší splátka, ale kolik vás to nakonec stojí?", "Rozvod a společná hypotéka: 4 možná řešení a proč na bance záleží nejvíc", "Úmrtí dlužníka a hypotéka: co čeká rodinu a jak ji ochránit předem", "Potíže se splácením hypotéky: 5 řešení, která můžete bance navrhnout", "Splatit hypotéku dřív, nebo investovat? 5 pravidel pro rozumné rozhodnutí", "Hypotéka na rekonstrukci: jak si půjčit na opravu domu bez zbytečných chyb"]], ["Pojištění nemovitosti", "dum", ["Podpojištění domu: proč vám pojišťovna vyplatí jen část škody", "Pojištění nemovitosti, nebo domácnosti? Jednoduchý test, který rozhodne", "Povodeň a pojištění: 4 věci, které musíte vědět dřív, než přijde voda", "Pojištění odpovědnosti v běžném životě: malá platba, která vás chrání před velkým dluhem", "Vytopili jste souseda? Kdo platí škodu a co udělat v první hodině", "Byt v nájmu: kdo co pojišťuje, aby po škodě nezůstala díra", "Pojištění chaty a chalupy: proč nestačí opsat smlouvu od domu", "Krádež a vloupání: jak zabezpečit byt, aby pojišťovna zaplatila celou škodu", "Pojištění fotovoltaiky na střeše: 5 věcí, které po instalaci nahlásit pojišťovně", "Novostavba: jak pojistit dům, který teprve roste", "Pojištění k hypotéce: co je vinkulace a proč nemusíte brát pojistku od banky", "Vichřice a krupobití: jak nahlásit škodu, aby pojišťovna neměla důvod krátit", "Pojištění bytového domu a SVJ: kde končí pojistka domu a začíná ta vaše"]], ["Daně a nemovitosti", "pozemek", ["Daň z nemovitostí: spočítejte si ji za 5 minut a nezmeškejte 31. května", "Výdajové paušály OSVČ: kdy vám skutečné výdaje ušetří desítky tisíc", "Daňové slevy a odpočty: 6 položek, které lidé v přiznání vynechávají", "Prodej zděděné nemovitosti: kdy zaplatíte 15 % daně a kdy nic", "Pronájem bytu a daně: jak z nájemného nezaplatit víc, než musíte", "Darování nemovitosti v rodině: kdy nezaplatíte žádnou daň a na co přesto myslet"]], ["Investice a spoření", "pent2", ["DIP: jak ušetřit tisíce korun na dani ročně a nespálit se při výběru", "Penzijko: až 4 080 Kč příspěvku ročně a k tomu úspora na dani", "Příspěvek zaměstnavatele na penzi: až 50 000 Kč ročně bez daně", "Spořicí účet, nebo termínovaný vklad? Rozhoduje, kdy budete peníze potřebovat", "Finanční rezerva: kolik peněz mít stranou a kde je nenechat ztrácet hodnotu", "ETF pro začátečníky: jak investovat jednoduše a neplatit zbytečně", "Stavební spoření: vyplatí se ještě s podporou 1 000 Kč ročně?", "Investice pro děti: kolik naspoříte za 18 let a na čí jméno peníze vést", "Důchod z prvního pilíře: jak si spočítat, kolik od státu dostanete", "Daň z prodeje investic: kdy zaplatíte 15 % a kdy nic", "Garantované výnosy: 7 varovných signálů, že jde o podvod", "Finanční plán pro rodinu v 5 krocích: od rezervy po důchod"]], ["Firmy a komerce", "hala2", ["Pojištění odpovědnosti podnikatele: jedna chyba může stát víc než roční tržby", "Pojištění firemního majetku: 5 rozhodnutí, která určí, kolik dostanete", "Flotilové pojištění: od kolika aut se vyplatí a kdy zůstat u jednotlivých smluv", "Pojištění přerušení provozu: kdo zaplatí nájem a mzdy, když firma stojí", "Kybernetické pojištění pro malé firmy: co zaplatí, když vás zašifrují", "Odpovědnost zaměstnance za škodu: kdy zaplatí 4,5násobek mzdy a kdy všechno", "Zákonné pojištění odpovědnosti zaměstnavatele: co musíte udělat hned u prvního zaměstnance", "Profesní odpovědnost: kdo ji musí mít a kdy se vyplatí i bez povinnosti", "Úvěr pro OSVČ a malé firmy: jak banku přesvědčit a kdy pomůže státní záruka", "Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit", "Pojištění odpovědnosti členů vedení: kdy jednatel s.r.o. platí ze svého", "Pojištění stavebních firem: 3 smlouvy, bez kterých na stavbu nevstupujte", "Pojištění dopravce a nákladu: proč vám dopravce nezaplatí celou hodnotu zboží", "Podnikatelská rezerva: kolik měsíců nákladů mít stranou a kde je držet", "Jak vybrat pojišťovacího poradce nebo makléře: 6 otázek před první schůzkou"]]];
 
 const S=[
  ['villa','Luxusní bydlení','Domov, který <em>stojí za to</em> financovat správně','Vily, penthousy a výjimečné byty. A k nim financování, které sedí.','#projekt','Vila','Zobrazit projekt'],
  ['rezidence','Novostavby','Nové byty v Praze. <em>Od rezervace po klíče.</em>','Aktuální projekty s ceníkem, financováním a pojištěním na jednom místě.','#projekt','Rezidence','Ceník bytů'],
- ['hala','Haly a komerce','Hala, sklad, areál. <em>Financování na míru.</em>','Pro developery a firmy: investiční a developerské úvěry, pojištění staveb.','#clanek','Komerce','Číst článek'],
- ['penthouse','Investice','Výhled, který <em>se zhodnocuje</em>','Jak vybrat a financovat nemovitost, která vydělává.','#clanek','Penthouse','Číst článek'],
+ ['hala','Haly a komerce','Hala, sklad, areál. <em>Financování na míru.</em>','Pro developery a firmy: investiční a developerské úvěry, pojištění staveb.','#clanek-145','Komerce','Číst článek'],
+ ['penthouse','Investice','Výhled, který <em>se zhodnocuje</em>','Jak vybrat a financovat nemovitost, která vydělává.','#archiv','Penthouse','Číst magazín'],
  ['dum','Rodinné domy','Dům se zahradou <em>kousek za Prahou</em>','Nové lokality, ceny a co obnáší hypotéka na rodinný dům.','#projekt','Domy','Zobrazit domy']
 ];
 const hero=document.getElementById('hero');
@@ -520,14 +526,14 @@ const A=[
  ['Pozemky a development','Odhad nemovitosti vyšel pod kupní cenou? Co to znamená a co dělat','Jak odhad ovlivní hypotéku a jaké máte možnosti.','pozemek','50% 50%'],
  ['Investice','Odpočet úroků z hypotéky: kolik ušetříte a jak ho uplatnit','Limity, potvrzení od banky a kdy odpočet nevznikne.','pent2','50% 50%']
 ];
-side.innerHTML=A.slice(0,4).map(a=>`<a href="#clanek"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><div><span class="kicker">${a[0]}</span><h4>${a[1]}</h4></div></a>`).join('');
+side.innerHTML=A.slice(0,4).map(a=>`<a href="${LK(a[1])}"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><div><span class="kicker">${a[0]}</span><h4>${a[1]}</h4></div></a>`).join('');
 const C=['Vše','Hypotéky','Novostavby','Luxusní bydlení','Haly a komerce','Pozemky a development','Pojištění','Investice'];
 cats.innerHTML=C.map((c,i)=>`<button class="cat${i?'':' active'}">${c}</button>`).join('');
-const card=a=>`<a href="#clanek" class="card"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><span class="kicker">${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></a>`;
+const card=a=>`<a href="${LK(a[1])}" class="card"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><span class="kicker">${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></a>`;
 function render(c){grid.innerHTML=A.filter(a=>c==='Vše'||a[0]===c).map(card).join('')||'<p style="color:var(--muted)">V této rubrice zatím nic není.</p>'}
 render('Vše');
 document.querySelectorAll('.cat').forEach(b=>b.onclick=()=>{document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.textContent)});
-rel.innerHTML=[A[4],A[9],A[1]].map(card).join('');
+
 
 const f=n=>n.toLocaleString('cs-CZ');
 function calc(){const p=+a.value,n=+y.value*12,i=+r.value/100/12,m=p*i/(1-Math.pow(1+i,-n));vA.textContent=f(p)+' Kč';vY.textContent=y.value+' let';vR.textContent=(+r.value).toFixed(2).replace('.',',')+' %';out.textContent=f(Math.round(m))+' Kč'}
@@ -537,11 +543,20 @@ document.querySelectorAll('.nf').forEach(fm=>fm.onsubmit=e=>{e.preventDefault();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 const hdr=document.getElementById('hdr');
-function hdrState(){const v=(location.hash||'#home').slice(1);const overHero=(v==='home'||v==='projekt'||v==='clanek'||v==='archiv')&&scrollY<innerHeight*0.6;hdr.classList.toggle('solid',!overHero)}
+function hdrState(){const v=(location.hash||'#home').slice(1);const overHero=(v==='home'||v==='projekt'||v.startsWith('clanek')||v==='archiv')&&scrollY<innerHeight*0.6;hdr.classList.toggle('solid',!overHero)}
 addEventListener('scroll',hdrState,{passive:true});
 let pending=null;
 document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',()=>{pending=el.dataset.go;const v=(location.hash||'#home').slice(1);if(el.getAttribute('href')==='#'+v)route()}));
-function route(){const v=(location.hash||'#home').slice(1);const id=['home','clanek','projekt','archiv'].includes(v)?v:'home';
+const AGI={};AG.forEach(g=>g[2].forEach(t=>{AGI[TN[t]]=[g[0],g[1],t]}));
+async function loadArt(n){if(!AGI[n])n=145;const r=await fetch('clanky/'+n+'.json');const d=await r.json();
+ arImg.src='img/'+d.img+'.jpg';arK.textContent=d.k;arT.textContent=d.t;arM.innerHTML='<b>Tomáš Richtr</b>, Vision & Synergy · listopad 2026 · '+d.min+' min čtení';
+ arP.innerHTML=d.perex;arB.innerHTML=d.html;arD.textContent=(d.disc||'Článek má informativní charakter a není individuálním doporučením.')+' Zprostředkování provádějí osoby registrované u ČNB.';
+ document.title=d.t+' | Fundament';const md=document.querySelector('meta[name=description]');if(md)md.content=d.d;
+ const same=AG.find(g=>g[0]===d.k)[2].filter(t=>TN[t]!==n);const pick=[];for(let i=0;i<same.length&&pick.length<3;i+=Math.max(1,Math.floor(same.length/3)))pick.push(same[i]);
+ rel.innerHTML=pick.map(t=>`<a href="#clanek-${TN[t]}" class="card"><div class="ph"><img loading="lazy" src="img/${d.img}.jpg" alt=""></div><span class="kicker">${d.k}</span><h3>${t}</h3></a>`).join('')}
+const T0=document.title;
+function route(){let v=(location.hash||'#home').slice(1);let an=null;const m=v.match(/^clanek-(\d+)$/);if(m){an=+m[1];v='clanek'}else if(v==='clanek')an=145;
+ const id=['home','clanek','projekt','archiv'].includes(v)?v:'home';if(id!=='clanek')document.title=T0;if(an)loadArt(an);
  document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+id));
  if(pending){const t=document.getElementById(pending);pending=null;setTimeout(()=>t&&t.scrollIntoView({behavior:'smooth'}),40)}else scrollTo(0,0);
  document.querySelectorAll('.view.on .reveal').forEach(e=>io.observe(e));hdrState()}
@@ -558,7 +573,7 @@ addEventListener('scroll',()=>{if(!document.getElementById('v-clanek').classList
 
 function renderArch(){const q=(aq.value||'').toLowerCase().trim();const c=(document.querySelector('#acats .cat.active')||{}).dataset?.c||'Vše';let shown=0;
  agroups.innerHTML=AG.filter(g=>c==='Vše'||g[0]===c).map(g=>{const items=g[2].filter(t=>!q||t.toLowerCase().includes(q));shown+=items.length;if(!items.length)return'';
- return `<div class="agroup"><div class="gh"><div class="gimg"><img loading="lazy" src="img/${g[1]}.jpg" alt=""></div><div><h2>${g[0]}</h2><div class="cnt">${items.length} článků</div><ol class="alist">${items.map(t=>`<li><a href="#clanek"><span>${t}</span></a></li>`).join('')}</ol></div></div></div>`}).join('');
+ return `<div class="agroup"><div class="gh"><div class="gimg"><img loading="lazy" src="img/${g[1]}.jpg" alt=""></div><div><h2>${g[0]}</h2><div class="cnt">${items.length} článků</div><ol class="alist">${items.map(t=>`<li><a href="${LK(t)}"><span>${t}</span></a></li>`).join('')}</ol></div></div></div>`}).join('');
  aempty.style.display=shown?'none':'block'}
 acats.innerHTML=['Vše',...AG.map(g=>g[0])].map((c,i)=>`<button class="cat${i?'':' active'}" data-c="${c}">${c}</button>`).join('');
 acats.querySelectorAll('.cat').forEach(b=>b.onclick=()=>{acats.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderArch()});
