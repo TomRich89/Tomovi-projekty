@@ -358,7 +358,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
   <section id="kdo"><div class="wrap" style="display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:center">
     <div class="reveal"><span class="kicker">Kdo za magazínem stojí</span><h2 style="font-size:clamp(32px,3.6vw,46px);line-height:1.06;margin-top:12px">Lidé, kteří financování a prodej řeší každý den</h2></div>
     <div class="reveal" style="border-top:1px solid var(--ink);padding-top:24px">
-      <p style="font-size:18px;margin-bottom:16px">Fundament vydává <b>Vision &amp; Synergy s.r.o.</b> Články píše a odborně garantuje tým, který denně řeší hypotéky, pojištění nemovitostí a financování projektů pro rodiny, developery a firmy v Praze a Středních Čechách.</p>
+      <p style="font-size:18px;margin-bottom:16px">Články píše a odborně garantuje tým, který denně řeší hypotéky, pojištění nemovitostí a financování projektů pro rodiny, developery a firmy v Praze a Středních Čechách.</p>
       <p style="font-size:18px;color:var(--muted);margin-bottom:22px">Každý článek prochází odbornou kontrolou a vychází ze zdrojů, které uvádíme (ČNB, zákony, podmínky bank a pojišťoven).</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn" data-modal="obecne">Napište nám</button><a class="btn line" href="tel:+420723592976">723 592 976</a></div>
     </div>
@@ -402,7 +402,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
   <div class="wrap"><article class="body">
     <p class="perex" id="arP"></p>
     <div id="arB"></div>
-    <div class="author"><div class="av" id="arAv">XXX</div><p><b id="arAu">XXX</b>, Vision & Synergy</p></div>
+    <div class="author"><div class="av" id="arAv">XXX</div><p><b id="arAu">XXX</b></p></div>
     <p class="disc" id="arD"></p>
   </article></div>
   <section style="padding-top:40px"><div class="wrap">
@@ -461,7 +461,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 
 <footer><div class="wrap">
   <div class="top">
-    <div><div class="logo">Fundament<i style="color:var(--orange);font-style:normal">.</i></div><p style="margin-top:14px;max-width:340px">Magazín o nemovitostech a jejich financování. Vydává Vision & Synergy s.r.o.</p></div>
+    <div><div class="logo">Fundament<i style="color:var(--orange);font-style:normal">.</i></div><p style="margin-top:14px;max-width:340px">Magazín o nemovitostech a jejich financování.</p></div>
     <div><h5>Magazín</h5><ul><li><a href="#home" data-go="magazin">Hypotéky</a></li><li><a href="#home" data-go="magazin">Novostavby</a></li><li><a href="#home" data-go="magazin">Luxusní bydlení</a></li><li><a href="#home" data-go="magazin">Haly a komerce</a></li></ul></div>
     <div><h5>Projekty</h5><ul><li><a href="#home" data-go="projekty">Byty</a></li><li><a href="#home" data-go="projekty">Rodinné domy</a></li><li><a href="#home" data-go="firmy">Komerční prostory</a></li></ul></div>
     <div><h5>Kontakt</h5><ul><li><a data-modal="obecne">Napište nám</a></li><li><a href="tel:+420723592976">723 592 976</a></li><li><a href="https://vision-synergy.cz">vision-synergy.cz</a></li><li>fundamentmag.cz</li></ul></div>
@@ -549,7 +549,7 @@ let pending=null;
 document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',()=>{pending=el.dataset.go;const v=(location.hash||'#home').slice(1);if(el.getAttribute('href')==='#'+v)route()}));
 const AGI={};AG.forEach(g=>g[2].forEach(t=>{AGI[TN[t]]=[g[0],g[1],t]}));
 async function loadArt(n){if(!AGI[n])n=145;const r=await fetch('clanky/'+n+'.json');const d=await r.json();
- arImg.src='img/'+d.img+'.jpg';arK.textContent=d.k;arT.textContent=d.t;const au=d.autor||'XXX';arM.innerHTML='<b>'+au+'</b>, Vision & Synergy · listopad 2026 · '+d.min+' min čtení';arAu.textContent=au;arAv.textContent=au.length<=3?au:au.split(' ').map(x=>x[0]).join('').slice(0,2).toUpperCase();
+ arImg.src='img/'+d.img+'.jpg';arK.textContent=d.k;arT.textContent=d.t;const au=d.autor||'XXX';arM.innerHTML='<b>'+au+'</b> · listopad 2026 · '+d.min+' min čtení';arAu.textContent=au;arAv.textContent=au.length<=3?au:au.split(' ').map(x=>x[0]).join('').slice(0,2).toUpperCase();
  arP.innerHTML=d.perex;arB.innerHTML=d.html;arD.textContent=(d.disc||'Článek má informativní charakter a není individuálním doporučením.')+' Zprostředkování provádějí osoby registrované u ČNB.';
  document.title=d.t+' | Fundament';const md=document.querySelector('meta[name=description]');if(md)md.content=d.d;
  const same=AG.find(g=>g[0]===d.k)[2].filter(t=>TN[t]!==n);const pick=[];for(let i=0;i<same.length&&pick.length<3;i+=Math.max(1,Math.floor(same.length/3)))pick.push(same[i]);
