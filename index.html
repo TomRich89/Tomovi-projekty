@@ -309,7 +309,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
         <span class="kicker">Hlavní článek · Haly a komerce</span>
         <h3>Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit</h3>
         <p>Banka u haly, skladu nebo kanceláří posuzuje jinak než u bytu. Co chce vidět, kolik vlastních zdrojů počítat a jak se připravit.</p>
-        <div class="meta"><b>XX</b> · listopad 2026 · 4 min čtení</div>
+        <div class="meta"><b>XXX</b> · listopad 2026 · 4 min čtení</div>
       </a>
       <div class="list" id="side"></div>
     </div>
@@ -402,7 +402,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
   <div class="wrap"><article class="body">
     <p class="perex" id="arP"></p>
     <div id="arB"></div>
-    <div class="author"><div class="av" id="arAv">XX</div><p><b id="arAu">XX</b>, Vision & Synergy</p></div>
+    <div class="author"><div class="av" id="arAv">XXX</div><p><b id="arAu">XXX</b>, Vision & Synergy</p></div>
     <p class="disc" id="arD"></p>
   </article></div>
   <section style="padding-top:40px"><div class="wrap">
@@ -549,7 +549,7 @@ let pending=null;
 document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',()=>{pending=el.dataset.go;const v=(location.hash||'#home').slice(1);if(el.getAttribute('href')==='#'+v)route()}));
 const AGI={};AG.forEach(g=>g[2].forEach(t=>{AGI[TN[t]]=[g[0],g[1],t]}));
 async function loadArt(n){if(!AGI[n])n=145;const r=await fetch('clanky/'+n+'.json');const d=await r.json();
- arImg.src='img/'+d.img+'.jpg';arK.textContent=d.k;arT.textContent=d.t;const au=d.autor||'XX';arM.innerHTML='<b>'+au+'</b>, Vision & Synergy · listopad 2026 · '+d.min+' min čtení';arAu.textContent=au;arAv.textContent=au.length<=2?au:au.split(' ').map(x=>x[0]).join('').slice(0,2).toUpperCase();
+ arImg.src='img/'+d.img+'.jpg';arK.textContent=d.k;arT.textContent=d.t;const au=d.autor||'XXX';arM.innerHTML='<b>'+au+'</b>, Vision & Synergy · listopad 2026 · '+d.min+' min čtení';arAu.textContent=au;arAv.textContent=au.length<=3?au:au.split(' ').map(x=>x[0]).join('').slice(0,2).toUpperCase();
  arP.innerHTML=d.perex;arB.innerHTML=d.html;arD.textContent=(d.disc||'Článek má informativní charakter a není individuálním doporučením.')+' Zprostředkování provádějí osoby registrované u ČNB.';
  document.title=d.t+' | Fundament';const md=document.querySelector('meta[name=description]');if(md)md.content=d.d;
  const same=AG.find(g=>g[0]===d.k)[2].filter(t=>TN[t]!==n);const pick=[];for(let i=0;i<same.length&&pick.length<3;i+=Math.max(1,Math.floor(same.length/3)))pick.push(same[i]);
