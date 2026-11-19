@@ -8,10 +8,20 @@
 <meta property="og:title" content="Fundament — nemovitosti a jejich financování">
 <meta property="og:description" content="Magazín o nemovitostech, hypotékách a pojištění. Aktuální projekty v Praze a Středních Čechách.">
 <meta property="og:type" content="website">
-<link rel="preload" as="image" href="img/villa.jpg">
+<meta property="og:url" content="https://fundament.malyvelkyweb.cz/">
+<meta property="og:image" content="https://fundament.malyvelkyweb.cz/img/villa.jpg">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://fundament.malyvelkyweb.cz/">
+<meta name="theme-color" content="#0C1320">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230C1320'/%3E%3Ctext x='14' y='47' font-family='Georgia,serif' font-size='42' fill='%23F7F2E9'%3EF%3C/text%3E%3Ccircle cx='48' cy='44' r='5' fill='%23DD611C'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/villa.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Fundament","url":"https://fundament.malyvelkyweb.cz/","inLanguage":"cs","description":"Magazín o nemovitostech a jejich financování.","publisher":{"@type":"Organization","name":"Vision & Synergy s.r.o.","url":"https://vision-synergy.cz","telephone":"+420723592976"}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0C1320;--cream:#F7F2E9;--orange:#DD611C;--muted:#5b6170;--line:#e2d9c8;--card:#fffdf8}
+:root{--ink:#0C1320;--cream:#F7F2E9;--orange:#DD611C;--orange-ink:#AE4A12;--muted:#5b6170;--line:#e2d9c8;--card:#fffdf8}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Hanken Grotesk',sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -19,7 +29,10 @@ a{color:inherit;text-decoration:none;cursor:pointer}
 img{display:block;max-width:100%}
 .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
 h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-.015em}
-.kicker{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--orange)}
+.kicker{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--orange-ink)}
+.dark .kicker{color:#f0a072}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .view{display:none}.view.on{display:block}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:background .2s}
 .btn:hover{background:#c4520f}
@@ -73,7 +86,7 @@ header.solid{background:rgba(247,242,233,.96);backdrop-filter:blur(10px);color:v
 .cap-swap.out{opacity:0;transform:translateY(12px)}
 .hnav{position:absolute;left:0;right:0;bottom:34px;z-index:3}
 .hnav .wrap{display:flex;gap:18px;align-items:flex-end}
-.dot{flex:1;cursor:pointer;color:#c9c2b4;font-size:12px;letter-spacing:.06em;padding-top:12px;position:relative;text-transform:uppercase}
+.dot{flex:1;cursor:pointer;color:#c9c2b4;font-size:12px;letter-spacing:.06em;padding-top:12px;position:relative;text-transform:uppercase;background:none;border:0;font-family:inherit;text-align:left}
 .dot::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:rgba(247,242,233,.25)}
 .dot span.bar{position:absolute;top:0;left:0;height:2px;width:0;background:var(--orange)}
 .dot.on{color:var(--cream)}
@@ -94,6 +107,7 @@ section{padding:88px 0}
 .sh h2{font-size:clamp(34px,4vw,52px);line-height:1}
 .sh a{font-size:14px;font-weight:600}
 .sh a::after{content:" →";color:var(--orange)}
+.sh a{color:var(--orange-ink)}.dark .sh a{color:#f0a072}
 
 /* editorial grid */
 .ed{display:grid;grid-template-columns:1.55fr 1fr;gap:48px}
@@ -145,7 +159,7 @@ a:hover .ph img{transform:scale(1.045)}
 .split p{font-size:17px;color:var(--muted)}
 .split ul{list-style:none;border-top:1px solid var(--line)}
 .split li{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px;display:flex;justify-content:space-between}
-.split li span{color:var(--orange);font-weight:600}
+.split li span{color:var(--orange-ink);font-weight:600}
 
 /* calc */
 .calc{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -166,7 +180,7 @@ a:hover .ph img{transform:scale(1.045)}
 .nl h2{font-size:clamp(34px,4.5vw,58px);line-height:1.04;margin:14px auto 14px;max-width:760px;font-weight:300}
 .nl p{color:#ddd6c9;margin-bottom:28px}
 .nl form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.nl input{padding:15px 22px;border-radius:999px;border:1px solid rgba(247,242,233,.5);min-width:320px;font-family:inherit;font-size:15px;background:rgba(247,242,233,.1);color:var(--cream)}
+.nl input{padding:15px 22px;border-radius:999px;border:1px solid rgba(247,242,233,.5);flex:0 1 340px;min-width:0;font-family:inherit;font-size:15px;background:rgba(247,242,233,.1);color:var(--cream)}
 .nl input::placeholder{color:#c9c2b4}
 .ok{margin-top:16px;color:#f0a072;font-weight:600;display:none}
 
@@ -217,12 +231,31 @@ footer h5{color:var(--cream);font-size:12px;letter-spacing:.14em;text-transform:
 footer li{list-style:none;padding:4px 0}
 footer li a:hover{color:var(--orange)}
 footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-height:1.6}
+.burger{display:none;background:none;border:1px solid currentColor;color:inherit;border-radius:999px;width:44px;height:44px;cursor:pointer;font-size:18px}
+.acta{background:var(--ink);color:var(--cream);border-radius:6px;padding:32px;margin:48px 0 0;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.acta h3{font-size:26px;line-height:1.15;max-width:420px}
+.acta p{color:#c9c5bc;font-size:15px;margin:6px 0 0}
+.note{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:6px 12px;border-radius:999px;margin-bottom:18px}
+.mbar{display:none}
+.hp{position:absolute;left:-9999px}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:960px){
  #kdo .wrap{grid-template-columns:1fr!important;gap:24px!important}
  .wrap{padding:0 20px}.nav ul{display:none}
+ .burger{display:inline-flex;align-items:center;justify-content:center}
+ .nav .btn{display:none}
+ header.open{background:var(--cream);color:var(--ink)}
+ header.open .nav ul{display:flex;flex-direction:column;gap:0;position:absolute;top:78px;left:0;right:0;background:var(--cream);color:var(--ink);padding:8px 20px 20px;border-bottom:1px solid var(--line)}
+ header.open .nav ul a{display:block;padding:14px 0;font-size:17px;border-bottom:1px solid var(--line);opacity:1}
+ .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);border-top:1px solid #2a3344;padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+ .mbar a,.mbar button{flex:1;justify-content:center;padding:13px 10px;font-size:15px}
+ body{padding-bottom:72px}
+ .hcap p{font-size:17px}
+ .acta{padding:24px}
+ .hero .hnav{bottom:92px}.hero .pause{top:90px;bottom:auto;left:20px;right:auto}.hero .hcap{bottom:150px}.hero .hcount{top:96px;right:20px}
+ #v-projekt .hero .hcap{bottom:110px}
  .ed,.projs,.split,.calc,.pgrid,.inproj,.gal{grid-template-columns:1fr}
  .pc.big{min-height:440px}.grid{grid-template-columns:1fr}
  .strip .wrap,.pfacts{grid-template-columns:repeat(2,1fr)}
@@ -237,14 +270,15 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 
 <div class="progress" id="prog"></div>
 <header id="hdr"><div class="wrap nav">
-  <a href="#home" class="logo">Fundament<i>.</i></a>
-  <ul>
+  <a href="#home" class="logo" aria-label="Fundament – úvod">Fundament<i>.</i></a>
+  <ul id="mnav">
     <li><a href="#home" data-go="magazin">Magazín</a></li>
     <li><a href="#home" data-go="projekty">Projekty</a></li>
     <li><a href="#home" data-go="firmy">Pro firmy</a></li>
     <li><a href="#home" data-go="kalkulacka">Kalkulačka</a></li>
   </ul>
   <a href="#home" data-go="newsletter" class="btn">Odebírat</a>
+  <button class="burger" id="bg" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mnav">☰</button>
 </div></header>
 
 <!-- ================= HOME ================= -->
@@ -252,16 +286,16 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
   <div class="hero" id="hero">
     <div class="hcount"><span id="hc">01</span> / 05</div><button class="pause" id="pz" aria-label="Pozastavit prezentaci">❚❚</button>
     <div class="hcap"><div class="wrap"><div class="t cap-swap" id="cap">
-      <span class="kicker" id="capK"></span>
-      <h1 id="capH"></h1>
-      <p id="capP"></p>
-      <div class="ctas"><a class="btn" id="capA" href="#projekt">Prohlédnout</a><a class="btn line" href="#home" data-go="magazin">Číst magazín</a></div>
+      <span class="kicker" id="capK">Luxusní bydlení</span>
+      <h1 id="capH">Domov, který <em>stojí za to</em> financovat správně</h1>
+      <p id="capP">Vily, penthousy a výjimečné byty. A k nim financování, které sedí.</p>
+      <div class="ctas"><a class="btn" id="capA" href="#projekt">Zobrazit projekt</a><a class="btn line" href="#home" data-go="magazin">Číst magazín</a></div>
     </div></div></div>
     <div class="hnav"><div class="wrap" id="dots"></div></div>
   </div>
 
   <div class="strip"><div class="wrap">
-    <div class="s"><b>Každý den</b><span>nové články o nemovitostech a penězích</span></div>
+    <div class="s"><b>Srozumitelně</b><span>nemovitosti, hypotéky a pojištění bez žargonu</span></div>
     <div class="s"><b>Byty → haly</b><span>od prvního bytu po komerční projekty</span></div>
     <div class="s"><b>Pod jednou střechou</b><span>projekt, financování i pojištění</span></div>
     <div class="s"><b>Praha & Střední Čechy</b><span>lokální znalost trhu</span></div>
@@ -271,7 +305,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <div class="sh reveal"><h2>Magazín</h2><a href="#clanek">Všechny články</a></div>
     <div class="ed reveal">
       <a href="#clanek" class="feat">
-        <div class="ph"><img loading="lazy" src="img/hala2.jpg" alt="Moderní výrobní hala při západu slunce"></div>
+        <div class="ph"><img loading="lazy" src="img/hala.webp" alt="Moderní výrobní hala při západu slunce" width="1536" height="864"></div>
         <span class="kicker">Hlavní článek · Haly a komerce</span>
         <h3>Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit</h3>
         <p>Banka u haly, skladu nebo kanceláří posuzuje jinak než u bytu. Co chce vidět, kolik vlastních zdrojů počítat a jak se připravit.</p>
@@ -287,14 +321,14 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
   <section class="dark" id="projekty"><div class="wrap">
     <div class="sh reveal"><h2>Aktuální projekty</h2><a href="#projekt">Všechny projekty</a></div>
     <div class="projs reveal">
-      <a href="#projekt" class="pc big"><img src="img/villa.jpg" alt="Vila nad Prahou"><div class="in"><span class="tag">Luxusní bydlení</span><h3>[Vila Barrandov]</h3><div class="l">Praha 5 · 412 m² · bazén, výhled na Prahu</div><div class="pr">Cena na vyžádání</div></div></a>
-      <a href="#projekt" class="pc"><img loading="lazy" src="img/rezidence.jpg" alt="Rezidenční dům"><div class="in"><span class="tag">Novostavba</span><h3>[Rezidence U Hellady]</h3><div class="l">Praha 4 · 12 bytů s terasami</div><div class="pr">od 7,9 mil. Kč</div></div></a>
-      <a href="#projekt" class="pc"><img loading="lazy" src="img/domy.jpg" alt="Rodinné domy"><div class="in"><span class="tag">Rodinné domy</span><h3>[Domy Průhonice]</h3><div class="l">Praha-východ · 8 domů se zahradou</div><div class="pr">od 14,5 mil. Kč</div></div></a>
+      <a href="#projekt" class="pc big"><img loading="lazy" src="img/villa2.webp" alt="Vila s bazénem a výhledem"><div class="in"><span class="tag">Luxusní bydlení</span><h3>[Vila Barrandov]</h3><div class="l">Praha 5 · 412 m² · bazén, výhled na Prahu</div><div class="pr">Cena na vyžádání</div></div></a>
+      <a href="#projekt" class="pc"><img loading="lazy" src="img/rez2.webp" alt="Rezidenční dům s terasami"><div class="in"><span class="tag">Novostavba</span><h3>[Rezidence U Hellady]</h3><div class="l">Praha 4 · 12 bytů s terasami</div><div class="pr">od 7,9 mil. Kč</div></div></a>
+      <a href="#projekt" class="pc"><img loading="lazy" src="img/domy.webp" alt="Nová lokalita rodinných domů"><div class="in"><span class="tag">Rodinné domy</span><h3>[Domy Průhonice]</h3><div class="l">Praha-východ · 8 domů se zahradou</div><div class="pr">od 14,5 mil. Kč</div></div></a>
     </div>
   </div></section>
 
   <section id="firmy" style="padding:0"><div class="split">
-    <div class="ph"><img loading="lazy" src="img/domy.jpg" alt="Nová developerská lokalita rodinných domů"></div>
+    <div class="ph"><img loading="lazy" src="img/pozemek.webp" alt="Pozemek připravený pro novou výstavbu"></div>
     <div class="tx reveal">
       <span class="kicker">Pro developery a firmy</span>
       <h2>Stavíte halu, bytový dům nebo celý areál?</h2>
@@ -316,7 +350,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
       <label>Splatnost <span class="val" id="vY"></span></label><input type="range" id="y" min="5" max="30" step="1" value="30">
       <label>Úroková sazba <span class="val" id="vR"></span></label><input type="range" id="r" min="2" max="8" step="0.05" value="4.6">
       <div class="res"><div style="color:#c9c5bc;font-size:14px;margin-bottom:6px">Měsíční splátka</div><div class="big" id="out"></div>
-      <small>Výpočet je orientační, nejde o nabídku úvěru. Skutečné podmínky a RPSN závisí na posouzení bankou.</small></div>
+      <small>Výpočet je orientační, nejde o nabídku úvěru. Výchozí sazba slouží jen k ilustraci, nejde o aktuální nabídku banky. Skutečné podmínky a RPSN závisí na posouzení bankou.</small></div>
     </div>
   </div></section>
 
@@ -330,12 +364,12 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
   </div></section>
 
   <div class="nl" id="newsletter">
-    <img loading="lazy" src="img/penthouse.jpg" alt="">
+    <img loading="lazy" src="img/rezvecer.webp" alt="">
     <div class="wrap">
       <span class="kicker" style="color:#f0a072">Newsletter · jednou týdně</span>
       <h2>Nejlepší články a nové projekty dřív než na portálech</h2>
       <p>Bez spamu. Odhlásíte se jedním kliknutím.</p>
-      <form class="nf"><input type="email" placeholder="váš@email.cz" required><button class="btn" type="submit">Odebírat</button></form>
+      <form class="nf"><label class="sr" for="nlE">E-mail pro newsletter</label><input id="nlE" type="email" placeholder="váš@email.cz" required autocomplete="email"><button class="btn" type="submit">Odebírat</button></form>
       <div class="ok">Děkujeme, budeme vám psát.</div>
     </div>
   </div>
@@ -343,23 +377,32 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 
 <!-- ================= ARTICLE ================= -->
 <div class="view" id="v-clanek">
-  <div class="ahero"><img loading="lazy" src="img/hala.jpg" alt="Výrobní hala"><div class="in"><div class="wrap">
+  <div class="ahero"><img src="img/hala.webp" alt="Výrobní hala" fetchpriority="high"><div class="in"><div class="wrap">
     <span class="kicker" style="color:#f0a072">Haly a komerce</span>
     <h1>Úvěr na komerční nemovitost: proč to není hypotéka a jak se připravit</h1>
     <div class="meta"><b>Tomáš Richtr</b>, Vision & Synergy · 17. 11. 2026 · 7 min čtení</div>
   </div></div></div>
   <div class="wrap"><article class="body">
     <p class="perex">Banka u haly, skladu nebo kanceláří posuzuje jinak než u bytu. Projdeme, co chce vidět, kolik vlastních zdrojů počítat a jak se na jednání připravit.</p>
-    <p>[Ukázkový text. Sem přijde článek ze série, napsaný AI agentem, prošlý smyčkou kvality 95+ a vaší kontrolou.]</p>
+    <h2>Proč to není hypotéka</h2>
+    <p>Hypotéka na bydlení je spotřebitelský úvěr. Banka u ní zkoumá hlavně příjmy domácnosti a hodnotu bytu nebo domu. U haly, skladu, kanceláří nebo nájemního domu je dlužníkem obvykle firma a úvěr slouží podnikání. Banka proto neposuzuje jen nemovitost, ale celý podnikatelský záměr: z čeho se bude úvěr splácet, jak stabilní jsou příjmy a co se stane, když se něco nepovede.</p>
+    <p>Prakticky to znamená delší schvalování, víc podkladů a podmínky, které se sjednávají individuálně. Neexistuje jeden ceník, podle kterého by šlo nabídky jednoduše porovnat.</p>
     <h2>Kolik vlastních peněz banka chce</h2>
-    <p>U komerčních nemovitostí banky obvykle financují nižší podíl hodnoty než u bydlení. Rozhoduje typ stavby, nájemní smlouvy a historie firmy.</p>
+    <p>U komerčních nemovitostí banky obvykle financují nižší podíl hodnoty než u bydlení, takže počítejte s vyšším vlastním vkladem. Rozhoduje typ stavby, nájemní smlouvy a historie firmy. Výrobní hala na míru jednomu provozu je pro banku rizikovější než univerzální sklad, který se dá snadno pronajmout někomu jinému.</p>
+    <h2>Co banka chce vidět</h2>
+    <ul><li>účetní závěrky a daňová přiznání firmy za poslední roky</li><li>plán příjmů a výdajů: z čeho a jak dlouho se bude úvěr splácet</li><li>nájemní smlouvy nebo smlouvy o smlouvě budoucí, pokud nemovitost pronajímáte</li><li>ocenění nemovitosti a u výstavby rozpočet, harmonogram a stavební povolení</li><li>zajištění: zástava nemovitosti, případně ručení společníků</li></ul>
+    <p>Banka obvykle sleduje, jestli příjmy z nemovitosti nebo z provozu firmy s rezervou pokryjí splátky. Čím lépe to doložíte, tím silnější máte vyjednávací pozici.</p>
     <div class="pull">„Předem podepsané nájemní smlouvy často rozhodnou o podmínkách víc než samotná hodnota stavby.“</div>
     <h2>Možnosti financování</h2>
     <ul><li>investiční úvěr se zástavou pozemku</li><li>developerský úvěr čerpaný podle postupu stavby</li><li>leasing technologií odděleně od budovy</li><li>kombinace s dotačními programy</li></ul>
+    <h2>Jak se na jednání připravit</h2>
+    <p>Než půjdete do banky, sepište si na jednu stránku: co kupujete nebo stavíte, kolik to stojí, kolik vkládáte z vlastního a z čeho budete splácet. Přiložte čísla firmy a smlouvy s nájemci. Myslete i na pojištění: banka obvykle požaduje pojištění nemovitosti a jeho vinkulaci ve svůj prospěch, u výstavby navíc stavebně-montážní pojištění.</p>
+    <p>Vyplatí se oslovit víc bank najednou. Každá má jiný apetit na konkrétní typ nemovitosti a podmínky se mezi nimi mohou výrazně lišit.</p>
     <a href="#projekt" class="inproj">
-      <div class="ph"><img loading="lazy" src="img/hala.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="ph"><img loading="lazy" src="img/s/hala2.webp" alt="" style="width:100%;height:100%;object-fit:cover"></div>
       <div class="c"><span class="kicker" style="color:#f0a072">Související projekt</span><h3>[Logistický park Středočeský kraj]</h3><p>Hala 4 800 m² k pronájmu i prodeji, financování řešíme na míru.</p></div>
     </a>
+    <div class="acta"><div><h3>Řešíte financování haly nebo komerční stavby?</h3><p>Projdeme váš záměr a řekneme, s čím počítat, než půjdete do banky.</p></div><button class="btn" data-modal="firma">Probrat projekt</button></div>
     <div class="author"><div class="av">TR</div><p><b>Tomáš Richtr</b>, ředitel firemních spoluprací ve Vision & Synergy. Řeší financování a pojištění nemovitostí pro rodiny, developery a firmy.</p></div>
     <p class="disc">Článek má informativní charakter a není nabídkou úvěru ani pojištění. Zprostředkování provádějí osoby registrované u ČNB. [Doplnit údaje o registraci.]</p>
   </article></div>
@@ -372,7 +415,7 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
 <!-- ================= PROJECT ================= -->
 <div class="view" id="v-projekt">
   <div class="hero" style="height:88vh">
-    <div class="slide on"><img loading="lazy" src="img/rezidence.jpg" alt="Rezidence"></div>
+    <div class="slide on"><img src="img/rezidence.webp" alt="Rezidence"></div>
     <div class="hcap"><div class="wrap"><div class="t">
       <span class="kicker">Projekt · Praha 4 · Novostavba</span>
       <h1>[Rezidence <em>U Hellady</em>]</h1>
@@ -389,11 +432,12 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     </div>
     <div class="pgrid">
       <div>
+        <span class="note">Ukázka stránky projektu · ilustrační údaje</span><br>
         <span class="kicker">O projektu</span>
         <h2 style="font-size:40px;margin:10px 0 18px;line-height:1.1">Klidné bydlení pár minut od centra</h2>
         <p>[Popis projektu: lokalita, architektura, standardy, doprava, občanská vybavenost.]</p>
         <p>[Každý projekt má tuto stránku. Větší nebo luxusní projekty mohou běžet i na vlastní doméně a odkazovat zpět na Fundament.]</p>
-        <div class="gal"><div class="ph"><img loading="lazy" src="img/pent2.jpg" alt="Interiér" style="width:100%;height:100%;object-fit:cover"></div><div class="ph"><img loading="lazy" src="img/rez2.jpg" alt="Exteriér" style="width:100%;height:100%;object-fit:cover"></div></div>
+        <div class="gal"><div class="ph"><img loading="lazy" src="img/pent2.webp" alt="Interiér" style="width:100%;height:100%;object-fit:cover"></div><div class="ph"><img loading="lazy" src="img/rezvecer.webp" alt="Exteriér" style="width:100%;height:100%;object-fit:cover"></div></div>
         <h3 id="cenik" style="font-size:30px;margin-top:20px">Ceník</h3>
         <table class="u">
           <tr><th>Byt</th><th>Dispozice</th><th>Plocha</th><th>Cena</th><th>Stav</th></tr>
@@ -422,10 +466,11 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <div><div class="logo">Fundament<i style="color:var(--orange);font-style:normal">.</i></div><p style="margin-top:14px;max-width:340px">Magazín o nemovitostech a jejich financování. Vydává Vision & Synergy s.r.o.</p></div>
     <div><h5>Magazín</h5><ul><li><a href="#home" data-go="magazin">Hypotéky</a></li><li><a href="#home" data-go="magazin">Novostavby</a></li><li><a href="#home" data-go="magazin">Luxusní bydlení</a></li><li><a href="#home" data-go="magazin">Haly a komerce</a></li></ul></div>
     <div><h5>Projekty</h5><ul><li><a href="#home" data-go="projekty">Byty</a></li><li><a href="#home" data-go="projekty">Rodinné domy</a></li><li><a href="#home" data-go="firmy">Komerční prostory</a></li></ul></div>
-    <div><h5>Kontakt</h5><ul><li><a data-modal="obecne">Napište nám</a></li><li><a href="tel:+420723592976">723 592 976</a></li><li><a href="https://vision-synergy.cz">vision-synergy.cz</a></li><li>fundamentmag.cz</li></ul></div>
+    <div><h5>Kontakt</h5><ul><li><a href="#kontakt" data-modal="obecne">Napište nám</a></li><li><a href="tel:+420723592976">723 592 976</a></li><li><a href="https://vision-synergy.cz">vision-synergy.cz</a></li><li>fundamentmag.cz</li></ul></div>
   </div>
-  <div class="d">Obsah má informativní charakter a není investičním doporučením ani nabídkou úvěru či pojištění. [Doplnit údaje o registraci u ČNB.] Ilustrační fotografie.</div>
+  <div class="d">Obsah má informativní charakter a není investičním doporučením ani nabídkou úvěru či pojištění. [Doplnit údaje o registraci u ČNB.] Ilustrační fotografie. © 2026 Vision &amp; Synergy s.r.o.</div>
 </div></footer>
+<div class="mbar"><a class="btn line" href="tel:+420723592976" style="color:var(--cream)">Zavolat</a><button class="btn" data-modal="obecne">Napište nám</button></div>
 
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mT"><div class="m">
@@ -435,12 +480,13 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
     <h3 id="mT">Ozveme se vám</h3>
     <p id="mP">Nechte nám kontakt, do jednoho pracovního dne se vám ozveme.</p>
     <label for="mN">Jméno</label><input id="mN" required autocomplete="name">
-    <label for="mTel">Telefon nebo e-mail</label><input id="mTel" required>
+    <label for="mTel">Telefon nebo e-mail</label><input id="mTel" required autocomplete="tel" inputmode="email">
+    <input class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" name="web">
     <label for="mZ">O co máte zájem</label>
     <select id="mZ"><option value="prohlidka">Prohlídka projektu</option><option value="hypo">Hypotéka / financování</option><option value="poj">Pojištění nemovitosti</option><option value="firma">Financování projektu pro firmu</option><option value="obecne">Jiný dotaz</option></select>
     <button class="btn" type="submit" style="margin-top:20px;width:100%;justify-content:center">Odeslat</button>
     <p style="margin:16px 0 0;font-size:14px;text-align:center">Raději hned? Volejte <b>723 592 976</b></p>
-    <small>Odesláním souhlasíte se zpracováním kontaktu za účelem odpovědi. [Ukázka: formulář zatím nikam neodesílá.]</small>
+    <small>Kontakt použijeme jen k odpovědi na váš dotaz a nikomu dalšímu ho nepředáme. [Ukázka: formulář zatím nikam neodesílá.]</small>
   </form>
   <div class="done" id="mD"><h3>Děkujeme</h3><p>Ozveme se vám do jednoho pracovního dne.</p></div>
 </div></div>
@@ -454,37 +500,37 @@ const S=[
  ['dum','Rodinné domy','Dům se zahradou <em>kousek za Prahou</em>','Nové lokality, ceny a co obnáší hypotéka na rodinný dům.','#projekt','Domy','Zobrazit domy']
 ];
 const hero=document.getElementById('hero');
-S.forEach((s,i)=>hero.insertAdjacentHTML('afterbegin',`<div class="slide" data-i="${i}"><img loading="lazy" src="img/${s[0]}.jpg" alt="${s[1]}"></div>`));
-dots.innerHTML=S.map((s,i)=>`<div class="dot" data-i="${i}"><span class="bar"></span>0${i+1} <em style="font-style:normal">· ${s[5]}</em></div>`).join('');
+S.forEach((s,i)=>hero.insertAdjacentHTML('afterbegin',`<div class="slide" data-i="${i}"><img ${i?'loading="lazy"':'fetchpriority="high"'} src="img/${s[0]}.webp" alt="${s[1]}"></div>`));
+dots.innerHTML=S.map((s,i)=>`<button type="button" class="dot" data-i="${i}" aria-label="Snímek ${i+1}: ${s[1]}"><span class="bar"></span>0${i+1} <em style="font-style:normal">· ${s[5]}</em></button>`).join('');
 let cur=-1,timer;
 function show(i){if(i===cur)return;cur=i;
  document.querySelectorAll('#hero .slide').forEach(e=>e.classList.toggle('on',+e.dataset.i===i));
  document.querySelectorAll('.dot').forEach(e=>{e.classList.remove('on');void e.offsetWidth;if(+e.dataset.i===i)e.classList.add('on')});
- cap.classList.add('out');
- setTimeout(()=>{const s=S[i];capK.textContent=s[1];capH.innerHTML=s[2];capP.textContent=s[3];capA.href=s[4];capA.textContent=s[6];hc.textContent='0'+(i+1);cap.classList.remove('out')},500);
+ const first=!window.__heroInit;window.__heroInit=1;if(!first)cap.classList.add('out');
+ setTimeout(()=>{const s=S[i];capK.textContent=s[1];capH.innerHTML=s[2];capP.textContent=s[3];capA.href=s[4];capA.textContent=s[6];hc.textContent='0'+(i+1);cap.classList.remove('out')},first?0:500);
  clearTimeout(timer);if(!paused)timer=setTimeout(()=>show((cur+1)%S.length),7000)}
 document.querySelectorAll('.dot').forEach(d=>d.onclick=()=>show(+d.dataset.i));
 show(0);
 
 const A=[
- ['Hypotéky','Kolik vám banka půjčí? Tři čísla, která rozhodnou o vaší hypotéce','LTV, DTI a DSTI: limity ČNB srozumitelně a na příkladu.','rezvecer','50% 50%'],
+ ['Hypotéky','Kolik vám banka půjčí? Tři čísla, která rozhodnou o vaší hypotéce','LTV, DTI a DSTI: limity ČNB srozumitelně a na příkladu.','rezvecer','50% 60%'],
  ['Novostavby','Novostavba od developera: jak hypotéka čerpá po etapách a co to stojí','Zálohy developerovi, čerpání podle postupu stavby a poplatky.','dum','50% 50%'],
  ['Hypotéky','Koupě bytu s hypotékou krok za krokem: 8 kroků bez zbytečného stresu','Od výpočtu rozpočtu přes rezervaci až po čerpání a katastr.','pent2','50% 50%'],
  ['Pojištění','Novostavba: jak pojistit dům, který teprve roste','Stavebně-montážní pojištění, odpovědnost a co kryje banka.','pozemek','50% 50%'],
- ['Haly a komerce','Pojištění stavebních firem: 3 smlouvy, bez kterých na stavbu nevstupujte','Odpovědnost, stavebně-montážní pojištění a majetek firmy.','hala2','50% 50%'],
+ ['Haly a komerce','Pojištění stavebních firem: 3 smlouvy, bez kterých na stavbu nevstupujte','Odpovědnost, stavebně-montážní pojištění a majetek firmy.','hala2','30% 50%'],
  ['Hypotéky','Vlastní zdroje na hypotéku: proč 20 % ceny často nestačí','Poplatky, daň, rezerva a čím vlastní zdroje doložit.','rez2','50% 50%'],
- ['Novostavby','Rezervační smlouva: 7 bodů, které vás ochrání před ztrátou peněz','Co zkontrolovat, než podepíšete a zaplatíte rezervaci.','rezvecer','50% 50%'],
+ ['Novostavby','Rezervační smlouva: 7 bodů, které vás ochrání před ztrátou peněz','Co zkontrolovat, než podepíšete a zaplatíte rezervaci.','rezidence','50% 50%'],
  ['Pojištění','Podpojištění domu: proč vám pojišťovna vyplatí jen část škody','Jak nastavit pojistnou částku, aby pojišťovna nekrátila.','villa2','50% 50%'],
- ['Luxusní bydlení','Advokátní, notářská, nebo bankovní úschova: kde jsou vaše miliony v bezpečí','Rozdíly v ochraně, ceně a rychlosti převodu peněz.','villa2','50% 50%'],
- ['Haly a komerce','Pojištění firemního majetku: 5 rozhodnutí, která určí, kolik dostanete','Pojistná částka, nová cena, rizika a podklady.','hala2','50% 50%'],
- ['Pozemky a development','Odhad nemovitosti vyšel pod kupní cenou? Co to znamená a co dělat','Jak odhad ovlivní hypotéku a jaké máte možnosti.','pozemek','50% 50%'],
- ['Investice','Odpočet úroků z hypotéky: kolik ušetříte a jak ho uplatnit','Limity, potvrzení od banky a kdy odpočet nevznikne.','pent2','50% 50%']
+ ['Luxusní bydlení','Advokátní, notářská, nebo bankovní úschova: kde jsou vaše miliony v bezpečí','Rozdíly v ochraně, ceně a rychlosti převodu peněz.','villa','50% 50%'],
+ ['Haly a komerce','Pojištění firemního majetku: 5 rozhodnutí, která určí, kolik dostanete','Pojistná částka, nová cena, rizika a podklady.','hala','70% 50%'],
+ ['Pozemky a development','Odhad nemovitosti vyšel pod kupní cenou? Co to znamená a co dělat','Jak odhad ovlivní hypotéku a jaké máte možnosti.','domy','50% 50%'],
+ ['Investice','Odpočet úroků z hypotéky: kolik ušetříte a jak ho uplatnit','Limity, potvrzení od banky a kdy odpočet nevznikne.','penthouse','50% 50%']
 ];
-side.innerHTML=A.slice(0,4).map(a=>`<a href="#clanek"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><div><span class="kicker">${a[0]}</span><h4>${a[1]}</h4></div></a>`).join('');
+side.innerHTML=A.slice(0,4).map(a=>`<a href="#clanek"><div class="ph"><img loading="lazy" src="img/s/${a[3]}.webp" alt="" style="object-position:${a[4]}"></div><div><span class="kicker">${a[0]}</span><h4>${a[1]}</h4></div></a>`).join('');
 const C=['Vše','Hypotéky','Novostavby','Luxusní bydlení','Haly a komerce','Pozemky a development','Pojištění','Investice'];
 cats.innerHTML=C.map((c,i)=>`<button class="cat${i?'':' active'}">${c}</button>`).join('');
-const card=a=>`<a href="#clanek" class="card"><div class="ph"><img loading="lazy" src="img/${a[3]}.jpg" alt="" style="object-position:${a[4]}"></div><span class="kicker">${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></a>`;
-function render(c){grid.innerHTML=A.filter(a=>c==='Vše'||a[0]===c).map(card).join('')||'<p style="color:var(--muted)">V této rubrice zatím nic není.</p>'}
+const card=a=>`<a href="#clanek" class="card"><div class="ph"><img loading="lazy" src="img/s/${a[3]}.webp" alt="" style="object-position:${a[4]}"></div><span class="kicker">${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></a>`;
+function render(c){grid.innerHTML=(c==='Vše'?A.slice(4):A.filter(a=>a[0]===c)).map(card).join('')||'<p style="color:var(--muted)">V této rubrice zatím nic není.</p>'}
 render('Vše');
 document.querySelectorAll('.cat').forEach(b=>b.onclick=()=>{document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.textContent)});
 rel.innerHTML=[A[4],A[9],A[1]].map(card).join('');
@@ -507,11 +553,15 @@ function route(){const v=(location.hash||'#home').slice(1);const id=['home','cla
  document.querySelectorAll('.view.on .reveal').forEach(e=>io.observe(e));hdrState()}
 
 const M={prohlidka:['Prohlídka','Domluvme prohlídku','Vyberte si termín, rovnou spočítáme i financování.'],hypo:['Financování','Přesná nabídka hypotéky','Porovnáme nabídky bank a připravíme výpočet pro vaši situaci.'],firma:['Pro firmy','Probereme váš projekt','Developerské a investiční úvěry, pojištění stavby, hypotéky pro vaše kupující.'],obecne:['Kontakt','Napište nám','Nechte nám kontakt, do jednoho pracovního dne se vám ozveme.']};
-function openM(k){const t=M[k]||M.obecne;mK.textContent=t[0];mT.textContent=t[1];mP.textContent=t[2];mZ.value=k in M?k:'obecne';if(k==='obecne')mZ.value='obecne';mF.style.display='';mD.style.display='none';modal.classList.add('on');setTimeout(()=>mN.focus(),50)}
+function openM(k){lastF=document.activeElement;const t=M[k]||M.obecne;mK.textContent=t[0];mT.textContent=t[1];mP.textContent=t[2];mZ.value=k in M?k:'obecne';if(k==='obecne')mZ.value='obecne';mF.style.display='';mD.style.display='none';modal.classList.add('on');setTimeout(()=>mN.focus(),50)}
 document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();openM(b.dataset.modal)}));
-mX.onclick=()=>modal.classList.remove('on');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('on')};
-addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('on')});
-mF.onsubmit=e=>{e.preventDefault();mF.style.display='none';mD.style.display='block'};
+let lastF=null;
+function closeM(){modal.classList.remove('on');if(lastF)lastF.focus()}
+mX.onclick=closeM;modal.onclick=e=>{if(e.target===modal)closeM()};
+addEventListener('keydown',e=>{if(!modal.classList.contains('on'))return;if(e.key==='Escape')closeM();if(e.key==='Tab'){const f=[...modal.querySelectorAll('button,input:not(.hp),select,textarea,a[href]')].filter(x=>x.offsetParent);const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+mF.onsubmit=e=>{e.preventDefault();if(mF.querySelector('.hp').value)return;mF.style.display='none';mD.style.display='block';mX.focus()};
+bg.onclick=()=>{const o=hdr.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Zavřít menu':'Otevřít menu');bg.textContent=o?'×':'☰'};
+document.querySelectorAll('#mnav a').forEach(a=>a.addEventListener('click',()=>{if(hdr.classList.contains('open'))bg.click()}));
 pz.onclick=()=>{paused=!paused;pz.textContent=paused?'▶':'❚❚';pz.setAttribute('aria-label',paused?'Spustit prezentaci':'Pozastavit prezentaci');document.querySelectorAll('.dot span.bar,.slide img').forEach(e=>e.style.animationPlayState=paused?'paused':'running');clearTimeout(timer);if(!paused)timer=setTimeout(()=>show((cur+1)%S.length),7000)};
 if(matchMedia('(prefers-reduced-motion: reduce)').matches){pz.click()}
 addEventListener('scroll',()=>{if(!document.getElementById('v-clanek').classList.contains('on')){prog.style.width=0;return}const h=document.documentElement;prog.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%'},{passive:true});
