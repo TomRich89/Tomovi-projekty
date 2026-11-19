@@ -258,7 +258,8 @@ footer .d{border-top:1px solid #2a3344;padding-top:24px;font-size:12px;line-heig
  #v-projekt .hero .hcap{bottom:110px}
  .ed,.projs,.split,.calc,.pgrid,.inproj,.gal{grid-template-columns:1fr}
  .pc.big{min-height:440px}.grid{grid-template-columns:1fr}
- .strip .wrap,.pfacts{grid-template-columns:repeat(2,1fr)}
+ .strip .wrap,.pfacts{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .strip div.s{padding:20px 12px 20px 0}.strip div.s:nth-child(2n){border-right:0;padding-left:12px}.strip div.s:nth-child(n+3){border-top:1px solid var(--line)}.strip b{font-size:23px;line-height:1.15;margin-bottom:4px}.pfacts b{font-size:24px}
  .split .ph{min-height:320px}.split .tx{padding:44px 24px}
  footer .top{grid-template-columns:1fr 1fr}
  .hnav .dot em{display:none}.hcap{bottom:84px}
